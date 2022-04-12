@@ -14,4 +14,4 @@ This is a respository for the group project in EBU6304 - SOFTWARE ENGINEERING.
 当前任务：
 ---
 1. uml
-2. 数据库
+2. UI
