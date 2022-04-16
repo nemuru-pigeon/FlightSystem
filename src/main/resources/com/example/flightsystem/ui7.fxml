@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0">
+   <Button blendMode="SRC_ATOP"
+           layoutX="14.0" layoutY="790.0"
+           mnemonicParsing="false"
+           prefHeight="50.0"
+           prefWidth="140.0"
+           style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;"
+           textFill="WHITE"
+           textOverrun="CLIP"/>
+   <Label layoutX="63.0"
+          layoutY="785.0"
+          prefHeight="61.0"
+          prefWidth="83.0"
+          text="Exit"
+          textAlignment="CENTER"
+          textFill="#f5f5f5">
+      <font>
+         <Font name="Arial Bold" size="27.0"/>
+      </font>
+   </Label>
+   <Button blendMode="SRC_ATOP"
+           layoutX="164.0"
+           layoutY="790.0"
+           mnemonicParsing="falseMain.java"
+           prefHeight="50.0"
+           prefWidth="140.0"
+           style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;"
+           textFill="WHITE"
+           textOverrun="CLIP"/>
+   <Button blendMode="SRC_ATOP"
+           layoutX="912.0"
+           layoutY="790.0"
+           mnemonicParsing="false"
+           prefHeight="50.0"
+           prefWidth="140.0"
+           style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;"
+           textFill="WHITE"
+           textOverrun="CLIP"/>
+   <Button blendMode="SRC_ATOP"
+           layoutX="1066.0"
+           layoutY="790.0"
+           mnemonicParsing="false"
+           prefHeight="50.0"
+           prefWidth="200.0"
+           style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: red;"
+           textFill="WHITE"
+           textOverrun="CLIP"/>
+   <Label layoutX="204.0"
+          layoutY="785.0"
+          prefHeight="61.0"
+          prefWidth="83.0"
+          text="Help"
+          textAlignment="CENTER"
+          textFill="#f5f5f5">
+      <font>
+         <Font name="Arial Bold" size="27.0"/>
+      </font>
+   </Label>
+   <Label layoutX="941.0"
+          layoutY="785.0"
+          prefHeight="61.0"
+          prefWidth="83.0"
+          text="Back"
+          textAlignment="CENTER"
+          textFill="#f5f5f5">
+      <font>
+         <Font name="Arial Bold" size="27.0"/>
+      </font>
+   </Label>
+   <Label layoutX="1125.0"
+          layoutY="785.0"
+          prefHeight="61.0"
+          prefWidth="83.0"
+          text="NEXT"
+          textAlignment="CENTER"
+          textFill="#f5f5f5">
+      <font>
+         <Font name="Arial Bold" size="27.0"/>
+      </font>
+   </Label>
+   <Button blendMode="SRC_ATOP"
+           focusTraversable="false"
+           layoutX="400.0"
+           layoutY="644.0"
+           mnemonicParsing="false"
+           prefHeight="75.0"
+           prefWidth="744.0"
+           style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: red;" textFill="WHITE"
+           textOverrun="CLIP"/>
+   <Label layoutX="105.0"
+          layoutY="589.0"
+          prefHeight="0.0"
+          prefWidth="1104.0"
+          style="-fx-background-color: black; -fx-border-width: 1px;">
+      <font>
+         <Font size="1.0"/>
+      </font>
+   </Label>
+   <Label layoutX="287.0" layoutY="663.0" text="OR">
+      <font>
+         <Font name="Arial" size="32.0"/>
+      </font>
+   </Label>
+   <Label layoutX="445.0"
+          layoutY="663.0"
+          prefHeight="37.0"
+          prefWidth="654.0"
+          text="I want a Specific gourmet menu(extra pay)"
+          textFill="WHITE">
+      <font>
+         <Font name="Arial" size="27.0"/>
+      </font>
+   </Label>
+   <Canvas height="200.0"
+           layoutX="156.0"
+           layoutY="252.0" width="200.0"/>
+   <Pane layoutX="181.0"
+         layoutY="239.0"
+         prefHeight="200.0"
+         prefWidth="200.0">
+      <Rectangle arcHeight="5.0"
+                 arcWidth="5.0"
+                 fill="#fcfcfc"
+                 height="200.0"
+                 stroke="BLACK"
+                 strokeType="INSIDE"
+                 width="200.0"/>
+      <Line endX="100.0" layoutX="100.0" layoutY="99.0" rotate="45.0" scaleX="1.38" startX="-100.0"/>
+      <Line endX="200.0" endY="200.0" rotate="-90.0"/>
+   </Pane>
+   <Pane layoutX="441.0"
+         layoutY="239.0"
+         prefHeight="200.0"
+         prefWidth="200.0">
+      <Rectangle arcHeight="5.0"
+                 arcWidth="5.0"
+                 fill="#fcfcfc"
+                 height="200.0"
+                 stroke="BLACK"
+                 strokeType="INSIDE"
+                 width="200.0"/>
+      <Line endX="100.0" layoutX="100.0" layoutY="99.0" rotate="45.0" scaleX="1.38" startX="-100.0"/>
+      <Line endX="200.0" endY="200.0" rotate="-90.0"/>
+   </Pane>
+   <Pane layoutX="687.0"
+         layoutY="239.0"
+         prefHeight="200.0"
+         prefWidth="200.0">
+      <Rectangle arcHeight="5.0"
+                 arcWidth="5.0"
+                 fill="#fcfcfc"
+                 height="200.0"
+                 stroke="BLACK"
+                 strokeType="INSIDE"
+                 width="200.0"/>
+      <Line endX="100.0" layoutX="100.0" layoutY="99.0" rotate="45.0" scaleX="1.38" startX="-100.0"/>
+      <Line endX="200.0" endY="200.0" rotate="-90.0"/>
+   </Pane>
+   <Pane layoutX="933.0"
+         layoutY="239.0"
+         prefHeight="200.0"
+         prefWidth="200.0">
+      <Rectangle arcHeight="5.0"
+                 arcWidth="5.0"
+                 fill="#fcfcfc"
+                 height="200.0"
+                 stroke="BLACK"
+                 strokeType="INSIDE"
+                 width="200.0"/>
+      <Line endX="100.0" layoutX="100.0" layoutY="99.0" rotate="45.0" scaleX="1.38" startX="-100.0"/>
+      <Line endX="200.0" endY="200.0" rotate="-90.0"/>
+   </Pane>
+   <CheckBox contentDisplay="CENTER"
+             layoutX="181.0"
+             layoutY="485.0"
+             mnemonicParsing="false"
+             nodeOrientation="RIGHT_TO_LEFT"
+             prefHeight="37.0"
+             prefWidth="188.0"
+             text="Standard"
+             textAlignment="JUSTIFY"
+             textOverrun="LEADING_WORD_ELLIPSIS">
+      <font>
+         <Font name="Arial Bold" size="26.0"/>
+      </font>
+   </CheckBox>
+   <CheckBox contentDisplay="CENTER"
+             layoutX="447.0"
+             layoutY="485.0"
+             mnemonicParsing="false"
+             nodeOrientation="RIGHT_TO_LEFT"
+             prefHeight="37.0"
+             prefWidth="188.0"
+             text="Vegetarian"
+             textAlignment="JUSTIFY"
+             textOverrun="LEADING_WORD_ELLIPSIS">
+      <font>
+         <Font name="Arial Bold" size="26.0"/>
+      </font>
+   </CheckBox>
+   <CheckBox contentDisplay="CENTER"
+             layoutX="693.0"
+             layoutY="485.0"
+             mnemonicParsing="false"
+             nodeOrientation="RIGHT_TO_LEFT"
+             prefHeight="37.0"
+             prefWidth="188.0"
+             text="Halal"
+             textAlignment="JUSTIFY"
+             textOverrun="LEADING_WORD_ELLIPSIS">
+      <font>
+         <Font name="Arial Bold" size="26.0"/>
+      </font>
+   </CheckBox>
+   <CheckBox contentDisplay="CENTER"
+             layoutX="939.0"
+             layoutY="485.0"
+             mnemonicParsing="false"
+             nodeOrientation="RIGHT_TO_LEFT"
+             prefHeight="37.0"
+             prefWidth="188.0"
+             text="XXX"
+             textAlignment="JUSTIFY"
+             textOverrun="LEADING_WORD_ELLIPSIS">
+      <font>
+         <Font name="Arial Bold" size="26.0"/>
+      </font>
+   </CheckBox>
+   <Label layoutX="245.0"
+          layoutY="162.0"
+          text="In-flight meals "
+          textFill="#e43939">
+      <font>
+         <Font name="Arial Bold" size="26.0"/>
+      </font>
+   </Label>
+</AnchorPane>
