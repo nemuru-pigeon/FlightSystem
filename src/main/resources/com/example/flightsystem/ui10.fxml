@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="105.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="65.0" text="Payment Information" textFill="#d35252">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="61.0" fitWidth="126.0" layoutX="300.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/visa.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="120.0" layoutX="445.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/UnionPay.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="190.0" prefWidth="600.0" style="-fx-background-color: 2;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="223.0" layoutY="14.0" text="TOTAL ORDER AMOUNT:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextField layoutX="427.0" layoutY="12.0" prefHeight="27.0" prefWidth="144.0" />
+            <AnchorPane layoutX="30.0" layoutY="63.0" prefHeight="127.0" prefWidth="541.0" style="-fx-background-color: #d35252;">
+               <children>
+                  <Label layoutX="25.0" layoutY="33.0" text="ENTER CREDIT CARD NUMBER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="342.0" layoutY="33.0" />
+                  <Label layoutX="327.0" layoutY="77.0" text="CVV2 CODE" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="443.0" layoutY="77.0" prefHeight="27.0" prefWidth="84.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="447.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Back" textFill="WHITE" />
+            <Button layoutX="86.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Help" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: black;" text="EXIT" textFill="WHITE" />
+            <Button layoutX="509.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Back" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
