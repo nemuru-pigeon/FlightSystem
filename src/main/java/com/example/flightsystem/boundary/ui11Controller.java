@@ -1,26 +1,26 @@
 package com.example.flightsystem.boundary;
 
-import com.example.flightsystem.Main;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class ui3Controller {
+public class ui11Controller {
 
     @FXML
-    private Button back;
+    private Button exit;
 
     @FXML
     private Button next;
 
     @FXML
-    void toback(ActionEvent event) {
-        Main.jumpTo("ui2.fxml",1280,720,"wer");
+    void toexit(ActionEvent event) {
+
     }
 
     @FXML
     void tonext(ActionEvent event) {
-        Main.jumpTo("ui5.fxml",1280,720,"wer");
+
     }
 
 }
