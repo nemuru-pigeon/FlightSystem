@@ -1,4 +1,4 @@
 package com.example.flightsystem.entity;
 
-public class User {
+public class Meal {
 }
