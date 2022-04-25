@@ -1,4 +1,4 @@
-package com.example.flightsystem.JavaBean;
+package com.example.flightsystem.VO;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,6 +7,7 @@ public class OrderInformation implements Serializable {
     private String bookingNo;
     private String passengerName;
     private String passengerId;
+    private Date date;
     private String flightNo;
     private Character seatClass;
     private Date departureTime;
@@ -38,6 +39,14 @@ public class OrderInformation implements Serializable {
 
     public void setPassengerId(String passengerId) {
         this.passengerId = passengerId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getFlightNo() {

@@ -1,13 +1,11 @@
 package com.example.flightsystem.control;
 
-import com.example.flightsystem.JavaBean.OrderInformation;
-import com.example.flightsystem.JavaBean.SeatSituation;
+import com.example.flightsystem.VO.OrderInformation;
+import com.example.flightsystem.VO.SeatSituation;
 import com.example.flightsystem.control.impl.ControlImpl;
-import com.example.flightsystem.entity.Meal;
-import com.example.flightsystem.entity.Order;
-import com.example.flightsystem.entity.Passenger;
-import com.example.flightsystem.entity.Payment;
+import com.example.flightsystem.entity.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Control implements ControlImpl {
@@ -32,12 +30,35 @@ public class Control implements ControlImpl {
 
     @Override
     public List<OrderInformation> showOrders() {
-        return null;
+        List<OrderInformation> orderInformationList = new ArrayList<>();
+        OrderInformation orderInformation;
+        List<Order> orders = passenger.getOrders();
+        Shift shift;
+        ScheduledFlight scheduledFlight;
+
+        for (Order passengerOrder : orders) {
+            orderInformation = new OrderInformation();
+            orderInformation.setPassengerId(passenger.getId());
+            orderInformation.setPassengerName(passenger.getGivenName() + " " + passenger.getSurname());
+            orderInformation.setBookingNo(passengerOrder.getBookingNo());
+            orderInformation.setSeatClass(passengerOrder.getSeatClass());
+            shift = passengerOrder.getShift();
+            orderInformation.setDate(shift.getDate());
+            scheduledFlight = shift.getScheduledFlight();
+            orderInformation.setFlightNo(scheduledFlight.getFlightNo());
+            orderInformation.setDepartureTime(scheduledFlight.getDepartureTime());
+            orderInformation.setBoardingTime(scheduledFlight.getBoardingTime());
+            orderInformation.setDestination(scheduledFlight.getDestination());
+            orderInformationList.add(orderInformation);
+        }
+
+        return orderInformationList;
     }
 
     @Override
-    public void selectOrder(String bookingNo) {
-
+    public boolean selectOrder(String bookingNo) {
+        order = passenger.selectOrder(bookingNo);
+        return order != null;
     }
 
     @Override

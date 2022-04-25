@@ -1,7 +1,7 @@
 package com.example.flightsystem.control.impl;
 
-import com.example.flightsystem.JavaBean.OrderInformation;
-import com.example.flightsystem.JavaBean.SeatSituation;
+import com.example.flightsystem.VO.OrderInformation;
+import com.example.flightsystem.VO.SeatSituation;
 import com.example.flightsystem.entity.Meal;
 import com.example.flightsystem.entity.Payment;
 
@@ -12,7 +12,7 @@ public interface ControlImpl {
     boolean loginBySurnameAndId(String surname, String id);
     boolean loginById(String id);
     List<OrderInformation> showOrders();
-    void selectOrder(String bookingNo);
+    boolean selectOrder(String bookingNo);
     SeatSituation showSeat();
     boolean selectSeat(String type, int location);
     List<Meal> showNormalMeal();

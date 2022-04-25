@@ -1,4 +1,4 @@
-package com.example.flightsystem.JavaBean;
+package com.example.flightsystem.VO;
 
 import java.io.Serializable;
 import java.util.Arrays;
