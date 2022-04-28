@@ -36,7 +36,7 @@ public class ui4Controller {
 
     @FXML
     void gotonext(ActionEvent event) {
-
+        Main.jumpTo("ui5.fxml",1280,720,"wer");
     }
 
 }

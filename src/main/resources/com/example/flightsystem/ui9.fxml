@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightsystem.boundary.ui9Controller">
+   <children>
+      <Text fill="TOMATO" layoutX="103.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paymnet Information">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView layoutX="112.0" layoutY="168.0" prefHeight="436.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn prefWidth="133.0" text="Payment content" />
+            <TableColumn prefWidth="114.0" text="Order number" />
+            <TableColumn minWidth="0.0" prefWidth="203.0" text="Date" />
+            <TableColumn minWidth="0.0" prefWidth="158.0" text="Flight Number" />
+            <TableColumn minWidth="0.0" prefWidth="172.0" text="Amount" />
+            <TableColumn minWidth="0.0" prefWidth="130.0" text=" Order time" />
+            <TableColumn minWidth="0.0" prefWidth="167.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitP9" layoutX="14.0" layoutY="656.0" mnemonicParsing="false" onAction="#ExitP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpP9" layoutX="165.0" layoutY="656.0" mnemonicParsing="false" onAction="#HelpP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="HELP" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="908.0" layoutY="656.0" mnemonicParsing="false" onAction="#BackP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="1066.0" layoutY="656.0" mnemonicParsing="false" onAction="#NextP9" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FF6347;" text="NEXT" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
