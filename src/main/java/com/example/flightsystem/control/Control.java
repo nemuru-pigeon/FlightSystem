@@ -13,6 +13,7 @@ public class Control implements ControlImpl {
     private Passenger passenger;
     private Order order;
     private List<Meal> meals;
+    private Login login;
 
     @Override
     public boolean loginByBookingNo(String bookingNo) {
