@@ -16,17 +16,19 @@ public class Control implements ControlImpl {
 
     @Override
     public boolean loginByBookingNo(String bookingNo) {
-        return false;
+        return login.loginByBookingNo(bookingNo);
     }
+
 
     @Override
     public boolean loginBySurnameAndId(String surname, String id) {
-        return false;
+        return login.loginBySurnameAndId(surname, id);
+
     }
 
     @Override
     public boolean loginById(String id) {
-        return false;
+        return login.loginById(id);
     }
 
     @Override
