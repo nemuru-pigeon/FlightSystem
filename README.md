@@ -11,8 +11,3 @@ This is a flight check-in system based on EBC(Entity-Boundary-Control) pattern.
 3. 之前的总结，方便你们查看：  
 环境：idea，破解教程：https://www.bilibili.com/read/cv14405026  
 界面实现：javafx，该平台实现界面的方式是fxml（类似于html）+control类，例子：https://blog.csdn.net/baidu_30325009/article/details/93321504 （如何切换界面）
-
-当前任务：
----
-1. uml
-2. UI
