@@ -4,6 +4,7 @@ import com.example.flightsystem.VO.OrderInformation;
 import com.example.flightsystem.VO.SeatSituation;
 import com.example.flightsystem.control.impl.ControlImpl;
 import com.example.flightsystem.entity.*;
+import java.io.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,21 +13,20 @@ public class Control implements ControlImpl {
     private Passenger passenger;
     private Order order;
     private List<Meal> meals;
-    private Login login;
 
     @Override
     public boolean loginByBookingNo(String bookingNo) {
-        return login.loginByBookingNo(bookingNo);
+        return false;
     }
 
     @Override
     public boolean loginBySurnameAndId(String surname, String id) {
-        return login.loginBySurnameAndId(surname, id);
+        return false;
     }
 
     @Override
     public boolean loginById(String id) {
-        return login.loginById(id);
+        return false;
     }
 
     @Override
@@ -104,6 +104,28 @@ public class Control implements ControlImpl {
 
     @Override
     public boolean print() {
-        return false;
-    }
+        PrintInformation printInformation;
+        printInformation = new PrintInformation();
+        printInformation.setPassengerName(passenger.getGivenName() + " " + passenger.getSurname());
+        printInformation.setPassengerId(passenger.getId());
+        passengerOrder=passenger.getOrders();
+        printInformation.setSeatClass(passengerOrder.getSeatClass());
+        shift = passengerOrder.getShift();
+        printInformation.setDate(shift.getDate());
+        scheduledFlight = shift.getScheduledFlight();
+        printInformation.setFlightNo(scheduledFlight.getFlightNo());
+        printInformation.setDepartureTime(scheduledFlight.getDepartureTime());
+        printInformation.setBoardingTime(scheduledFlight.getBoardingTime());
+        printInformation.setDestination(scheduledFlight.getDestination());
+        printInformation.setcarryOnBaggage(passengerOrder.getcarryOnBaggage);
+        printInformation.setCheckInBaggage(passengerOrder.getCheckInBaggage);
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("PrintInformation.txt"));
+            out.write(printInformation);
+            out.close();
+            System.out.println("Successful！");
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
 }
