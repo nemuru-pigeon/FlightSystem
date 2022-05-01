@@ -1,8 +1,6 @@
 package com.example.flightsystem.entity;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,12 +14,12 @@ import com.example.flightsystem.entity.impl.LoginImpl;
  */
 public class Login implements LoginImpl{
     
-	private Passenger passenger; 
-	
+	private Passenger passenger;
+
 	@Override
 	public boolean loginByBookingNo(String bookingNo) {
 		Order oder=passenger.selectOrder(bookingNo);
-		return oder==null?false:true;
+		return oder != null;
 	}
 
 	@Override
@@ -34,26 +32,19 @@ public class Login implements LoginImpl{
         if(id==null) {
     	   return false;	
 		}
-        if(name.equals(surname) && id.equals(iid)) {
-        	return true;
-        }
-        
-		return false;
+		return name.equals(surname) && id.equals(iid);
 	}
 
 	@Override
 	public boolean loginById(String id) {
-		
-		StringBuffer strB = new StringBuffer();   //strB用来存储txt文件里的内容
-	    String str = "";
+
+		StringBuilder strB = new StringBuilder();   //strB用来存储txt文件里的内容
+	    String str;
 	    //需要假设一个txt之类的文档是机器传输过来的信息就可以
-	    String txtUrl ="http://127.0.0.1:8080/dd/file.action";//文件路径我是从后台传的 就是 http://127.0.0.1......
-	    URL url = null;
+		String path="/src/main/resources/com/example/flightsystem/input_files/id.txt"; //格式：id，surname, given name, gender
+		File file = new File(path); // 要读取以上路径的input.txt文件
 	    try {
-	        url = new URL(txtUrl);
-	        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-	        InputStreamReader isr = new InputStreamReader(connection.getInputStream());
-	        BufferedReader br = new BufferedReader(isr);
+			BufferedReader br = new BufferedReader(new FileReader(file));
 	        while ((str = br.readLine()) != null) {
 	            strB.append(str).append("<br>");   //将读取的内容放入strB
 	            String[] array=str.split(",");   //假设每行数据是以逗号分隔，id是第一个位置
@@ -62,13 +53,11 @@ public class Login implements LoginImpl{
 	            }
 	        }
 	        br.close();
-	    } catch (MalformedURLException e) {
-	        e.printStackTrace();
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }
-	    
-	    return false;
+
+		return false;
 	}
       
 }
