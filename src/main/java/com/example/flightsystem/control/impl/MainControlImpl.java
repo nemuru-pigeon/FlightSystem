@@ -7,7 +7,7 @@ import com.example.flightsystem.entity.Payment;
 
 import java.util.List;
 
-public interface ControlImpl {
+public interface MainControlImpl {
     boolean loginByBookingNo(String bookingNo);
     boolean loginBySurnameAndId(String surname, String id);
     boolean loginById(String id);
