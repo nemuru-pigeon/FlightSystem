@@ -1,57 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightsystem.boundary.PaymentUIController">
-   <top>
-      <AnchorPane prefHeight="112.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="8.0" layoutY="56.0" text="Payment Information" textFill="#a43939">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </top>
-   <center>
-      <AnchorPane prefHeight="227.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView layoutX="20.0" prefHeight="200.0" prefWidth="629.0">
-              <columns>
-                <TableColumn prefWidth="108.0" text="Payment content" />
-                <TableColumn prefWidth="94.0" text="Order number" />
-                  <TableColumn prefWidth="102.0" text="          Date&#10;(DD/MM/YYYY)" />
-                  <TableColumn prefWidth="99.0" text="Flight Number" />
-                  <TableColumn prefWidth="57.0" text="Amount" />
-                  <TableColumn prefWidth="69.0" text="Order time" />
-                  <TableColumn prefWidth="82.0" text="Price" />
-              </columns>
-            </TableView>
-            <Label layoutX="386.0" layoutY="210.0" text="TOTAL ORDER AMOUT:">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField layoutX="558.0" layoutY="207.0" prefHeight="27.0" prefWidth="96.0" />
-         </children>
-      </AnchorPane>
-   </center>
-   <bottom>
-      <AnchorPane prefHeight="61.0" prefWidth="668.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="483.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Back" textFill="WHITE" />
-            <Button layoutX="100.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Help" textFill="WHITE" />
-            <Button id="buttonExit" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Exit" textFill="WHITE" />
-            <Button id="ButtonNext" fx:id="ButtoncNext" layoutX="575.0" layoutY="23.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-color: black;" text="Next" textFill="WHITE" />
-         </children>
-      </AnchorPane>
-   </bottom>
-</BorderPane>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flightsystem.boundary.ui9Controller">
+   <children>
+      <Text fill="TOMATO" layoutX="103.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paymnet Information">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView layoutX="112.0" layoutY="168.0" prefHeight="436.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn prefWidth="133.0" text="Payment content" />
+            <TableColumn prefWidth="114.0" text="Order number" />
+            <TableColumn minWidth="0.0" prefWidth="203.0" text="Date" />
+            <TableColumn minWidth="0.0" prefWidth="158.0" text="Flight Number" />
+            <TableColumn minWidth="0.0" prefWidth="172.0" text="Amount" />
+            <TableColumn minWidth="0.0" prefWidth="130.0" text=" Order time" />
+            <TableColumn minWidth="0.0" prefWidth="167.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitP9" layoutX="14.0" layoutY="656.0" mnemonicParsing="false" onAction="#ExitP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpP9" layoutX="165.0" layoutY="656.0" mnemonicParsing="false" onAction="#HelpP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="HELP" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="908.0" layoutY="656.0" mnemonicParsing="false" onAction="#BackP9" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="1066.0" layoutY="656.0" mnemonicParsing="false" onAction="#NextP9" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FF6347;" text="NEXT" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
