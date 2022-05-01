@@ -10,8 +10,8 @@ module com.example.flightsystem {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.example.flightsystem to javafx.fxml;
-    exports com.example.flightsystem;
-    exports com.example.flightsystem.boundary;
-    opens com.example.flightsystem.boundary to javafx.fxml;
+    opens com.example.flight_system to javafx.fxml;
+    exports com.example.flight_system;
+    exports com.example.flight_system.boundary;
+    opens com.example.flight_system.boundary to javafx.fxml;
 }
