@@ -2,14 +2,14 @@ package com.example.flightsystem.control;
 
 import com.example.flightsystem.VO.OrderInformation;
 import com.example.flightsystem.VO.SeatSituation;
-import com.example.flightsystem.control.impl.ControlImpl;
+import com.example.flightsystem.control.impl.MainControlImpl;
 import com.example.flightsystem.entity.*;
 import java.io.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Control implements ControlImpl {
+public class MainControl implements MainControlImpl {
     private Passenger passenger;
     private Order order;
     private List<Meal> meals;
