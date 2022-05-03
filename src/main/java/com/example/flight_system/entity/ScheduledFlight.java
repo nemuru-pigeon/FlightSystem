@@ -12,6 +12,7 @@ public class ScheduledFlight implements ScheduledFlightImpl {
     private Date departureTime;
     private Date boardingTime;
     private String destination;
+    private String placeOfDeparture;
 
     public ScheduledFlight(Map<String, String> scheduledFlight) {
         flightNo = scheduledFlight.get("flight_no");
@@ -27,6 +28,7 @@ public class ScheduledFlight implements ScheduledFlightImpl {
         }
 
         destination = scheduledFlight.get("destination");
+        placeOfDeparture = scheduledFlight.get("place_of_departure");
     }
 
     @Override
@@ -47,5 +49,10 @@ public class ScheduledFlight implements ScheduledFlightImpl {
     @Override
     public String getDestination() {
         return destination;
+    }
+
+    @Override
+    public String getPlaceOfDeparture() {
+        return placeOfDeparture;
     }
 }

@@ -5,12 +5,15 @@ import com.example.flight_system.VO.SeatSituation;
 import com.example.flight_system.control.impl.MainControlImpl;
 import com.example.flight_system.entity.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MainControl implements MainControlImpl {
     private final DataControl dataControl = new DataControl();
+    private final OutputControl outputControl = new OutputControl();
     private Passenger passenger;
     private Order order;
     private List<Meal> meals;
@@ -131,30 +134,35 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public boolean print() {
-//        PrintInformation printInformation;
-//        printInformation = new PrintInformation();
-//        printInformation.setPassengerName(passenger.getGivenName() + " " + passenger.getSurname());
-//        printInformation.setPassengerId(passenger.getId());
-//        passengerOrder = passenger.getOrders();
-//        printInformation.setSeatClass(passengerOrder.getSeatClass());
-//        shift = passengerOrder.getShift();
-//        printInformation.setDate(shift.getDate());
-//        scheduledFlight = shift.getScheduledFlight();
-//        printInformation.setFlightNo(scheduledFlight.getFlightNo());
-//        printInformation.setDepartureTime(scheduledFlight.getDepartureTime());
-//        printInformation.setBoardingTime(scheduledFlight.getBoardingTime());
-//        printInformation.setDestination(scheduledFlight.getDestination());
-//        printInformation.setcarryOnBaggage(passengerOrder.getcarryOnBaggage);
-//        printInformation.setCheckInBaggage(passengerOrder.getCheckInBaggage);
-//        try {
-//            BufferedWriter out = new BufferedWriter(new FileWriter("PrintInformation.txt"));
-//            out.write(printInformation);
-//            out.close();
-//            System.out.println("Successful！");
-//            return true;
-//        } catch (IOException e) {
-//            return false;
-//        }
-        return false;
+        Map<String, String> passInf = new HashMap<>();
+        Shift shift = order.getShift();
+        ScheduledFlight scheduledFlight = shift.getScheduledFlight();
+        String bookingNo = order.getBookingNo();
+        String id = passenger.getId();
+        passInf.put("booking_no", bookingNo);
+        passInf.put("flight", scheduledFlight.getFlightNo());
+        passInf.put("seat", order.getSeat());
+        passInf.put("class", String.valueOf(order.getSeatClass()));
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        String dateString = sdf1.format(shift.getDate());
+        passInf.put("date", dateString);
+        passInf.put("from", scheduledFlight.getPlaceOfDeparture());
+        passInf.put("to", scheduledFlight.getDestination());
+        passInf.put("name", passenger.getGivenName() + " " + passenger.getSurname());
+        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm");
+        String departureTimeString = sdf2.format(scheduledFlight.getDepartureTime());
+        passInf.put("departure time", departureTimeString);
+
+        boolean result = outputControl.printBoardingPass(passInf);
+        int carryOnBaggage = order.getCarryOnBaggage();
+        int checkInBaggage = order.getCheckInBaggage();
+        if (carryOnBaggage != 0) {
+            result = result && outputControl.printTags(bookingNo, id, carryOnBaggage);
+        }
+        if (checkInBaggage != 0) {
+            result = result && outputControl.printTickets(bookingNo, id, checkInBaggage);
+        }
+
+        return result;
     }
 }

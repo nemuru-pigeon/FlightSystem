@@ -7,4 +7,5 @@ public interface ScheduledFlightImpl {
     Date getDepartureTime();
     Date getBoardingTime();
     String getDestination();
+    String getPlaceOfDeparture();
 }
