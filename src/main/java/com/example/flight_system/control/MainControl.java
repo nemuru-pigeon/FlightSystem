@@ -4,29 +4,55 @@ import com.example.flight_system.VO.OrderInformation;
 import com.example.flight_system.VO.SeatSituation;
 import com.example.flight_system.control.impl.MainControlImpl;
 import com.example.flight_system.entity.*;
-import java.io.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MainControl implements MainControlImpl {
+    private final DataControl dataControl = new DataControl();
     private Passenger passenger;
     private Order order;
     private List<Meal> meals;
 
     @Override
     public boolean loginByBookingNo(String bookingNo) {
-        return false;
-    }
+        List<Map<String, String>> orderList = dataControl.getAllOrders();
+        String id = null;
+        for (Map<String, String> orderMap : orderList) {
+            if (orderMap.get("booking_no").equals(bookingNo)) {
+                id = orderMap.get("pid");
+                break;
+            }
+        }
+        if (id == null) {
+            return false;
+        }
 
+        return loginById(id) && selectOrder(bookingNo);
+    }
 
     @Override
     public boolean loginBySurnameAndId(String surname, String id) {
+        List<Map<String, String>> passengerList = dataControl.getAllPassengers();
+        for (Map<String, String> passengerMap : passengerList) {
+            if (passengerMap.get("surname").equals(surname) && passengerMap.get("id").equals(id)) {
+                passenger = new Passenger(passengerMap);
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public boolean loginById(String id) {
+        List<Map<String, String>> passengerList = dataControl.getAllPassengers();
+        for (Map<String, String> passengerMap : passengerList) {
+            if (passengerMap.get("id").equals(id)) {
+                passenger = new Passenger(passengerMap);
+                return true;
+            }
+        }
         return false;
     }
 
