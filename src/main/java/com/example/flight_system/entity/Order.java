@@ -56,6 +56,21 @@ public class Order implements OrderImpl {
     }
 
     @Override
+    public int getCarryOnBaggage() {
+        return carryOnBaggage;
+    }
+
+    @Override
+    public int getCheckInBaggage() {
+        return checkInBaggage;
+    }
+
+    @Override
+    public String getSeat() {
+        return seat;
+    }
+
+    @Override
     public Shift getShift() {
         return shift;
     }
