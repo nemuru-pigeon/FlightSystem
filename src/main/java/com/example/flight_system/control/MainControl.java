@@ -118,9 +118,17 @@ public class MainControl implements MainControlImpl {
     }
 
     @Override
-    public List<Payment> showPayment() {
-        return null;
-    }
+    public List<PaymentInformation> showPayment() {
+        List<PaymentInformation> paymentList= new ArrayList<>();
+        Payment payment;
+        PaymentInformation paymentInformation= new PaymentInformation;
+        paymentInformation.setDate(payment.getDate());
+        paymentInformation.setPrice(payment.getPrice());
+        paymentInformation.setDetail(payment.getDetail());
+        paymentInformation.setpaymentId(payment.getpaymentId());
+        paymentList.add(paymentInformtion);
+        return paymentList;
+         }
 
     @Override
     public boolean pay(String cardNum, String vcc2Code) {
