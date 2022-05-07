@@ -23,4 +23,20 @@ public class Payment {
         }
         price = Integer.parseInt(payment.get("price"));
     }
+    public String getDate() {
+        return date;
+}
+
+public String getPrice() {
+        return price;
+}
+
+public String getDetail() {
+        return detail;
+}
+
+public String getpaymentId() {
+        return id;
+}
+    
 }
