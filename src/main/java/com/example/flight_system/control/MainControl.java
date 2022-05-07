@@ -129,6 +129,12 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public boolean verifyId(String id) {
+        List<Map<String, String>> passengerList = dataControl.getAllPassengers();
+        for (Map<String, String> passengerMap : passengerList) {
+            if (passengerMap.get("id").equals(id)) {
+                return true;
+            }
+        }
         return false;
     }
 
