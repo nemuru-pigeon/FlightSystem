@@ -1,7 +1,9 @@
 package com.example.flight_system.control;
 
 import com.example.flight_system.control.impl.DataControlImpl;
+import com.example.flight_system.entity.Shift;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -68,5 +70,47 @@ public class DataControl implements DataControlImpl {
     public List<Map<String, String>> getAllFlightTypes() {
         String path = filesPath + "flight_type.json";
         return getMaps(path);
+    }
+
+    @Override
+    public boolean updateData(String path, List<Map<String, String>> newData) {
+        File file = new File(path);
+        ObjectMapper mapper=new ObjectMapper();
+        try {
+            mapper.writer(new DefaultPrettyPrinter()).writeValue(file, newData);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    private String booleanArrToString(boolean[] array) {
+        StringBuilder resultBuilder = new StringBuilder();
+        for (boolean entry : array) {
+            if (entry) {
+                resultBuilder.append(1);
+            } else {
+                resultBuilder.append(0);
+            }
+        }
+        return resultBuilder.toString();
+    }
+
+    @Override
+    public boolean updateShift(Shift shift) {
+        List<Map<String, String>> shiftList = getAllShifts();
+        String id = shift.getId();
+        for (Map<String, String> shiftMap : shiftList) {
+            if (shiftMap.get("id").equals(id)) {
+                shiftMap.put("first", booleanArrToString(shift.getFirst()));
+                shiftMap.put("business", booleanArrToString(shift.getBusiness()));
+                shiftMap.put("economy", booleanArrToString(shift.getEconomy()));
+                shiftMap.put("costlyEconomy", booleanArrToString(shift.getCostlyEconomy()));
+                break;
+            }
+        }
+        String path = filesPath + "shift.json";
+        return updateData(path, shiftList);
     }
 }

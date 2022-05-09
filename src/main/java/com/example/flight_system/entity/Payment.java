@@ -9,18 +9,18 @@ public class Payment {
     private String id;
     private String detail;
     private Date date;
-    private int price;
+    private float price;
 
     public Payment(Map<String, String> payment) {
         id = payment.get("id");
         detail = payment.get("detail");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         try {
             date = sdf.parse(payment.get("date"));
         } catch (ParseException e) {
             e.printStackTrace();
             date = null;
         }
-        price = Integer.parseInt(payment.get("price"));
+        price = Float.parseFloat(payment.get("price"));
     }
 }

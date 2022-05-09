@@ -2,8 +2,12 @@ package com.example.flight_system.control;
 
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class DataControlTest {
 
@@ -36,12 +40,55 @@ class DataControlTest {
     }
 
     @Test
+    void getAllPayment() {
+        DataControl dataControl = new DataControl();
+        List<Map<String, String>> result = dataControl.getAllPayments();
+        for (Map<String, String> map : result) {
+            System.out.println(map.get("price"));
+            System.out.println(Float.parseFloat(map.get("price")));
+        }
+    }
+
+    @Test
     void getAllFlightTypes() {
         DataControl dataControl = new DataControl();
         List<Map<String, String>> result = dataControl.getAllFlightTypes();
         for (Map<String, String> map : result) {
             System.out.println(map.get("structure"));
             System.out.println(map.get("structure").length());
+        }
+    }
+
+    @Test
+    void updateData() {
+        DataControl dataControl = new DataControl();
+        List<Map<String, String>> shiftList = dataControl.getAllShifts();
+        for (Map<String, String> shiftMap : shiftList) {
+            if (shiftMap.get("id").equals("221204WH2156")) {
+                shiftMap.put("first", "11011101");
+                break;
+            }
+        }
+        String path = "src/main/resources/com/example/flight_system/data/" + "test.json";
+
+        dataControl.updateData(path, shiftList);
+    }
+
+    @Test
+    void booleanArrToString() {
+        DataControl dataControl = new DataControl();
+        Class<DataControl> testedClass = DataControl.class;
+        boolean[] input = {true, false, true, false, false};
+        String answer = "10100";
+
+        try {
+            Method method = testedClass.getDeclaredMethod("booleanArrToString", boolean[].class);
+            method.setAccessible(true);
+            Object obj = method.invoke(dataControl, new Object[]{input});
+            String result = obj.toString();
+            assertEquals(answer, result);
+        } catch (Exception e) {
+            fail();
         }
     }
 }

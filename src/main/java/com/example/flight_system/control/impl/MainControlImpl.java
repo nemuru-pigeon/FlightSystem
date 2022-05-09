@@ -21,5 +21,7 @@ public interface MainControlImpl {
     List<Payment> showPayment();
     boolean pay(String cardNum, String vcc2Code);
     boolean verifyId(String id);
+    boolean updateDate();
     boolean print();
+    boolean exitCheckIn();
 }

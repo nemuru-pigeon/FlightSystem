@@ -3,9 +3,8 @@ package com.example.flight_system.entity;
 import com.example.flight_system.control.DataControl;
 import com.example.flight_system.entity.impl.OrderImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Order implements OrderImpl {
     private final DataControl dataControl = new DataControl();
@@ -82,6 +81,62 @@ public class Order implements OrderImpl {
 
     @Override
     public boolean selectSeat(String type, int location) {
-        return false;
+        // record the location of the seat
+        int typeInt;
+        switch (type) {
+            case "first":
+                typeInt = 1;
+                break;
+            case "business":
+                typeInt = 2;
+                break;
+            case "economy":
+                typeInt = 3;
+                break;
+            case "costlyEconomy":
+                typeInt = 4;
+                break;
+            default:
+                return false;
+        }
+        int[][] structure = shift.getFlight().getType().getStructure();
+        int count = 0;
+        int rowNum = structure.length;
+        int columnNum = structure[0].length;
+        label1:
+        for (int i=0; i<rowNum; i++) {
+            for (int j=0; j<columnNum; j++) {
+                if (structure[i][j] == typeInt) {
+                    count++;
+                }
+                if (count == location) {
+                    int columnCount = 0;
+                    for (int k=0; k<j; k++) {
+                        if (structure[i][k] != 0) {
+                            columnCount++;
+                        }
+                    }
+                    seat = String.format("%02d", (i+1)) + ('A'+columnCount);
+                    break label1;
+                }
+            }
+        }
+
+        // add a new payment
+        Map<String, String> paymentMap = new HashMap<>();
+        Date date = new Date();
+
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyMMdd");
+        paymentMap.put("id", sdf1.format(date) + "SE");
+        paymentMap.put("detail", "Choose extra payed seat");
+        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        paymentMap.put("date", sdf2.format(date));
+        paymentMap.put("price", "5.0");
+
+        Payment payment = new Payment(paymentMap);
+        payments.add(payment);
+
+        // change the seating situation on the same flight
+        return shift.updateSeatSituation(type, location);
     }
 }
