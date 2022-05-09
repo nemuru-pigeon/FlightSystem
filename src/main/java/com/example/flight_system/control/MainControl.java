@@ -1,6 +1,7 @@
 package com.example.flight_system.control;
 
 import com.example.flight_system.VO.OrderInformation;
+import com.example.flight_system.VO.PaymentInformation;
 import com.example.flight_system.VO.SeatSituation;
 import com.example.flight_system.control.impl.MainControlImpl;
 import com.example.flight_system.entity.*;
@@ -129,16 +130,21 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public List<PaymentInformation> showPayment() {
-        List<PaymentInformation> paymentList= new ArrayList<>();
-        Payment payment;
-        PaymentInformation paymentInformation= new PaymentInformation;
-        paymentInformation.setDate(payment.getDate());
-        paymentInformation.setPrice(payment.getPrice());
-        paymentInformation.setDetail(payment.getDetail());
-        paymentInformation.setpaymentId(payment.getpaymentId());
-        paymentList.add(paymentInformtion);
-        return paymentList;
-         }
+        List<PaymentInformation> paymentInformationList = new ArrayList<>();
+        PaymentInformation paymentInformation;
+        List<Payment> payments = order.getPayments();
+
+        for (Payment payment : payments) {
+            paymentInformation = new PaymentInformation();
+            paymentInformation.setId(payment.getId());
+            paymentInformation.setDate(payment.getDate());
+            paymentInformation.setDetail(payment.getDetail());
+            paymentInformation.setPrice(payment.getPrice());
+            paymentInformationList.add(paymentInformation);
+        }
+
+        return paymentInformationList;
+    }
 
     @Override
     public boolean pay(String cardNum, String vcc2Code) {
@@ -147,13 +153,7 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public boolean verifyId(String id) {
-        List<Map<String, String>> passengerList = dataControl.getAllPassengers();
-        for (Map<String, String> passengerMap : passengerList) {
-            if (passengerMap.get("id").equals(id)) {
-                return true;
-            }
-        }
-        return false;
+        return passenger.getId().equals(id);
     }
 
     @Override

@@ -1,11 +1,13 @@
 package com.example.flight_system.entity;
 
+import com.example.flight_system.entity.impl.PaymentImpl;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-public class Payment {
+public class Payment implements PaymentImpl {
     private String id;
     private String detail;
     private Date date;
@@ -23,20 +25,24 @@ public class Payment {
         }
         price = Float.parseFloat(payment.get("price"));
     }
-    public String getDate() {
-        return date;
-}
 
-public String getPrice() {
-        return price;
-}
-
-public String getDetail() {
-        return detail;
-}
-
-public String getpaymentId() {
+    @Override
+    public String getId() {
         return id;
-}
-    
+    }
+
+    @Override
+    public String getDetail() {
+        return detail;
+    }
+
+    @Override
+    public Date getDate() {
+        return date;
+    }
+
+    @Override
+    public float getPrice() {
+        return price;
+    }
 }

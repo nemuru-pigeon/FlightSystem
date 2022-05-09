@@ -70,6 +70,11 @@ public class Order implements OrderImpl {
     }
 
     @Override
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    @Override
     public Shift getShift() {
         return shift;
     }

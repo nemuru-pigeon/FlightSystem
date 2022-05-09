@@ -1,6 +1,7 @@
 package com.example.flight_system.control.impl;
 
 import com.example.flight_system.VO.OrderInformation;
+import com.example.flight_system.VO.PaymentInformation;
 import com.example.flight_system.VO.SeatSituation;
 import com.example.flight_system.entity.Meal;
 import com.example.flight_system.entity.Payment;
@@ -18,7 +19,7 @@ public interface MainControlImpl {
     List<Meal> showNormalMeal();
     List<Meal> showExtraMeal();
     void selectMeal(int id);
-    List<Payment> showPayment();
+    List<PaymentInformation> showPayment();
     boolean pay(String cardNum, String vcc2Code);
     boolean verifyId(String id);
     boolean updateDate();
