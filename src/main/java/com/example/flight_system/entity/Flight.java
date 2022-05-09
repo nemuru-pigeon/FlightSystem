@@ -1,12 +1,12 @@
 package com.example.flight_system.entity;
 
 import com.example.flight_system.control.DataControl;
+import com.example.flight_system.entity.impl.FlightImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Flight {
+public class Flight implements FlightImpl {
     private final DataControl dataControl = new DataControl();
 
     private String id;
@@ -23,5 +23,10 @@ public class Flight {
                 break;
             }
         }
+    }
+
+    @Override
+    public FlightType getType() {
+        return type;
     }
 }

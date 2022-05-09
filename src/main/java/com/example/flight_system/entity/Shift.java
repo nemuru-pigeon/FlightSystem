@@ -20,6 +20,8 @@ public class Shift implements ShiftImpl {
     private boolean[] costlyEconomy;
     private ScheduledFlight scheduledFlight;
     private Flight flight;
+    private String changedType;
+    private boolean[] oldSeat;
 
     public Shift() {
     }
@@ -68,12 +70,70 @@ public class Shift implements ShiftImpl {
     }
 
     @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
     public Date getDate() {
         return date;
     }
 
     @Override
+    public boolean[] getFirst() {
+        return first;
+    }
+
+    @Override
+    public boolean[] getBusiness() {
+        return business;
+    }
+
+    @Override
+    public boolean[] getEconomy() {
+        return economy;
+    }
+
+    @Override
+    public boolean[] getCostlyEconomy() {
+        return costlyEconomy;
+    }
+
+    @Override
     public ScheduledFlight getScheduledFlight() {
         return scheduledFlight;
+    }
+
+    @Override
+    public Flight getFlight() {
+        return flight;
+    }
+
+    @Override
+    public boolean updateSeatSituation(String type, int location) {
+        changedType = type;
+        switch (type) {
+            case "first":
+                oldSeat = first;
+                first[location-1] = true;
+                break;
+            case "business":
+                oldSeat = business;
+                business[location-1] = true;
+                break;
+            case "economy":
+                oldSeat = economy;
+                economy[location-1] = true;
+                break;
+            case "costlyEconomy":
+                oldSeat = costlyEconomy;
+                costlyEconomy[location-1] = true;
+                break;
+            default:
+                return false;
+        }
+
+        // keep the seat occupied to avoid that people choose the same seat at the same time
+        return dataControl.updateShift(this);
     }
 }

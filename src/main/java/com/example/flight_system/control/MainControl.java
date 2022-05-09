@@ -94,12 +94,22 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public SeatSituation showSeat() {
-        return null;
+        SeatSituation seatSituation = new SeatSituation();
+        Shift shift = order.getShift();
+        FlightType flightType = shift.getFlight().getType();
+
+        seatSituation.setStructure(flightType.getStructure());
+        seatSituation.setFirst(shift.getFirst());
+        seatSituation.setBusiness(shift.getBusiness());
+        seatSituation.setEconomy(shift.getEconomy());
+        seatSituation.setCostlyEconomy(shift.getCostlyEconomy());
+
+        return seatSituation;
     }
 
     @Override
     public boolean selectSeat(String type, int location) {
-        return false;
+        return order.selectSeat(type, location);
     }
 
     @Override
@@ -147,6 +157,12 @@ public class MainControl implements MainControlImpl {
     }
 
     @Override
+    public boolean updateDate() {
+        // 吴语非写的存储数据的那部分，可以调DataControl里写好的updateShift，在仿照那个函数写order和payment的更新
+        return false;
+    }
+
+    @Override
     public boolean print() {
         Map<String, String> passInf = new HashMap<>();
         Shift shift = order.getShift();
@@ -178,5 +194,15 @@ public class MainControl implements MainControlImpl {
         }
 
         return result;
+    }
+
+    /**
+     * If the operator quits without finish the hole process,
+     * the reserved seat needs to be cancelled.
+     * @return whether the reserved seat is successfully cancelled
+     */
+    @Override
+    public boolean exitCheckIn() {
+        return false;
     }
 }
