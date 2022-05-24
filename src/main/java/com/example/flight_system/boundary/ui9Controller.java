@@ -30,22 +30,22 @@ public class ui9Controller {
 
     @FXML
     void ExitP9(ActionEvent event) {
-
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void HelpP9(ActionEvent event) {
-
+        Main.helppage();
     }
 
     @FXML
     void BackP9(ActionEvent event) {
-        Main.jumpTo("ui7.fxml",1280,720,"wer");
+        Main.jumpTo("ui7.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void NextP9(ActionEvent event) {
-        Main.jumpTo("ui10.fxml",1280,720,"wer");
+        Main.jumpTo("ui10.fxml",1280,720,"Flight System");
     }
 
     @FXML

@@ -15,13 +15,19 @@ public class ui11Controller {
     private Button next;
 
     @FXML
+    private Button help11;
+
+    @FXML
     void toexit(ActionEvent event) {
 
     }
-
+    @FXML
+    void help11page(ActionEvent event) {
+        Main.helppage();
+    }
     @FXML
     void tonext(ActionEvent event) {
-        Main.jumpTo("ui13.fxml",1280,720,"wer");
+        Main.jumpTo("ui13.fxml",1280,720,"Flight System");
     }
 
 }

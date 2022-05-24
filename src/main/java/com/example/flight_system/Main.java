@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui7.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
@@ -28,6 +28,18 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(Main.class.getResource(uiName));
             stage.setTitle(title);
             stage.setScene(new Scene(root, width,height));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void helppage(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("help.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

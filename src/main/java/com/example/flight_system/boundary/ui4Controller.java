@@ -4,6 +4,7 @@ import com.example.flight_system.Main;
 import com.example.flight_system.control.MainControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -52,6 +53,14 @@ public class ui4Controller {
         {
             Main.jumpTo("ui5.fxml",1280,720,"wer");
         }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setHeaderText("ERROR OCCURRED");
+            alert.setContentText("A WRONG ID OR SURNAME, CHECK AND TRY AGAIN");
+            alert.show();
+        }
+
     }
 
 }

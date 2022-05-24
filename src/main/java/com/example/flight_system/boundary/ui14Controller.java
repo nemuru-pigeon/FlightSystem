@@ -24,12 +24,12 @@ public class ui14Controller {
 
     @FXML
     void toback(ActionEvent event) {
-        Main.jumpTo("ui13.fxml",1280,720,"wer");
+        Main.jumpTo("ui13.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void tonext(ActionEvent event) {
-
+        Main.jumpTo("ui15.fxml",1280,720,"Flight System");
     }
 
     @FXML

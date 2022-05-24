@@ -44,27 +44,27 @@ public class ui7Controller {
 
     @FXML
     void ExitP7(ActionEvent event) {
-
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void HelpP7(ActionEvent event) {
-
+        Main.helppage();
     }
 
     @FXML
     void BackP7(ActionEvent event) {
-        Main.jumpTo("ui6.fxml",1280,720,"wer");
+        Main.jumpTo("ui6.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void NextP7(ActionEvent event) {
-        Main.jumpTo("ui9.fxml",1280,720,"wer");
+        Main.jumpTo("ui9.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void menuP7(ActionEvent event) {
-        Main.jumpTo("ui8.fxml",1280,720,"wer");
+        Main.jumpTo("ui8.fxml",1280,720,"Flight System");
     }
 
     @FXML

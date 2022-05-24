@@ -30,12 +30,11 @@ public class ui8Controller {
 
     @FXML
     void ExitP8(ActionEvent event) {
-
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
     @FXML
-    void HelpP8(ActionEvent event) {
-
+    void HelpP8(ActionEvent event) {Main.helppage();
     }
 
     @FXML

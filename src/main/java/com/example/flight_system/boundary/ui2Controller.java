@@ -22,17 +22,17 @@ public class ui2Controller {
     @FXML
     void jumptobookinginput(ActionEvent event) {
 
-        Main.jumpTo("ui3.fxml",1280,720,"wer");
+        Main.jumpTo("ui3.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void jumptonameinput(ActionEvent event) {
-        Main.jumpTo("ui4.fxml",1280,720,"wer");
+        Main.jumpTo("ui4.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void toexit(ActionEvent event) {
-
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
     @FXML

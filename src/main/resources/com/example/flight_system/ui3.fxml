@@ -13,7 +13,7 @@
             <Font size="23.0" />
          </font>
       </Button>
-      <Button layoutX="174.0" layoutY="650.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: black" text="HELP" textFill="WHITE">
+      <Button fx:id="help" layoutX="174.0" layoutY="650.0" mnemonicParsing="false" onAction="#showhelp" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: black" text="HELP" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>

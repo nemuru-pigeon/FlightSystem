@@ -23,6 +23,6 @@ public class ui1Controller {
     @FXML
     void teston(ActionEvent event) {
 
-        Main.jumpTo("ui2.fxml",1280,720,"wer");
+        Main.jumpTo("ui2.fxml",1280,720,"Flight System");
     }
 }

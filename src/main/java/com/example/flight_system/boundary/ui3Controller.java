@@ -4,8 +4,14 @@ import com.example.flight_system.Main;
 import com.example.flight_system.control.MainControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ui3Controller {
     private MainControl mainControl= new MainControl();
@@ -14,8 +20,17 @@ public class ui3Controller {
 
     @FXML
     private Button next;
+
     @FXML
     private TextField inputid;
+
+    @FXML
+    private Button help;
+
+    @FXML
+    void showhelp(ActionEvent event) {
+        Main.helppage();
+    }
     @FXML
     void toback(ActionEvent event) {
             Main.jumpTo("ui2.fxml",1280,720,"wer");
@@ -29,6 +44,13 @@ public class ui3Controller {
         if(ju == true)
         {
             Main.jumpTo("ui5.fxml",1280,720,"wer");
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setHeaderText("ERROR OCCURRED");
+            alert.setContentText("A WRONG ID, CHECK AND TRY AGAIN");
+            alert.show();
         }
 
     }
