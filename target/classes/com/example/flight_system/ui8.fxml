@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui8Controller">
+   <children>
+      <Button fx:id="exitP8" blendMode="SRC_ATOP" layoutX="14.0" layoutY="650.0" mnemonicParsing="false" onAction="#ExitP8" prefHeight="50.0" prefWidth="140.0" style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;" text="EXIT" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpP8" blendMode="SRC_ATOP" layoutX="174.0" layoutY="650.0" mnemonicParsing="falseMain.java" onAction="#HelpP8" prefHeight="50.0" prefWidth="140.0" style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;" text="HELP" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="backP8" blendMode="SRC_ATOP" layoutX="906.0" layoutY="650.0" mnemonicParsing="false" onAction="#BackP8" prefHeight="50.0" prefWidth="140.0" style="-fx-border-width: 2px; -fx-border-color: black; -fx-background-color: black;" text="BACK" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextP8" blendMode="SRC_ATOP" layoutX="1066.0" layoutY="650.0" mnemonicParsing="false" onAction="#NextP8" prefHeight="50.0" prefWidth="200.0" style="-fx-border-width: 2px; -fx-background-color: #ff6347;" text="Next" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Label layoutX="287.0" layoutY="74.0" text="In-flight meals " textFill="#e43939">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="80.0" text="You can choose in advance" />
+      <Label layoutX="658.0" layoutY="80.0" text="in gourmet menu " textFill="#e44747" />
+      <Label layoutX="762.0" layoutY="80.0" text="provided during the flight." />
+      <Label layoutX="214.0" layoutY="347.0" prefHeight="22.0" prefWidth="200.0" text="Ice cream  $10 " />
+      <Label layoutX="902.0" layoutY="353.0" prefHeight="15.0" prefWidth="104.0" text="Beefsteak  $25" />
+      <Label layoutX="572.0" layoutY="350.0" text="Sushi  $30" />
+      <Label layoutX="206.0" layoutY="593.0" prefHeight="31.0" prefWidth="123.0" text="Spaghetti  $20" />
+      <Label layoutX="560.0" layoutY="601.0" text="Hamburger  $20" />
+      <Button layoutX="507.0" layoutY="180.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/d545cdaf1ac029dbcd86d55b3ce8642b.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <Button layoutX="831.0" layoutY="182.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/d2ff3cfb07c7e39449e8e8e04337f44c.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <Button layoutX="175.0" layoutY="453.0" mnemonicParsing="false">
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <Button layoutX="515.0" layoutY="453.0" mnemonicParsing="false">
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <Button layoutX="831.0" layoutY="454.0" mnemonicParsing="false">
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <Label layoutX="902.0" layoutY="601.0" text="Chinese food  $15" />
+      <Label layoutX="1114.0" layoutY="482.0" text="Your choice is:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="167.0" layoutY="176.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/7dbcff45dd4dd843d6b375d58227fc92.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets top="-4.0" />
+         </padding>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/19aa179a3ae3c2c82b4ec10beca6191a.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="507.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/43d213748de19743e61e5fc46f3f76e3.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="831.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/2dc28a3249d9d3f90ad7ee55156694a9.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

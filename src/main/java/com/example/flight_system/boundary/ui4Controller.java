@@ -1,12 +1,14 @@
 package com.example.flight_system.boundary;
 
 import com.example.flight_system.Main;
+import com.example.flight_system.control.MainControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class ui4Controller {
-
+    private MainControl mainControl= new MainControl();
     @FXML
     private Button exit;
 
@@ -20,7 +22,14 @@ public class ui4Controller {
     private Button next;
 
     @FXML
+    private TextField SURNAME;
+
+    @FXML
+    private TextField IDNUMBER;
+
+    @FXML
     void gotoback(ActionEvent event) {
+
         Main.jumpTo("ui2.fxml",1280,720,"wer");
     }
 
@@ -36,7 +45,13 @@ public class ui4Controller {
 
     @FXML
     void gotonext(ActionEvent event) {
-        Main.jumpTo("ui5.fxml",1280,720,"wer");
+        String surname = SURNAME.getText().toString();
+        String idnumber = IDNUMBER.getText().toString();
+        boolean ju = mainControl.loginBySurnameAndId(surname,idnumber);
+        if(ju == true)
+        {
+            Main.jumpTo("ui5.fxml",1280,720,"wer");
+        }
     }
 
 }

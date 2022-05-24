@@ -1,6 +1,8 @@
 package com.example.flight_system.boundary;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 import com.example.flight_system.Main;
 import javafx.event.ActionEvent;
@@ -20,6 +22,7 @@ public class ui1Controller {
 
     @FXML
     void teston(ActionEvent event) {
+
         Main.jumpTo("ui2.fxml",1280,720,"wer");
     }
 }
