@@ -234,6 +234,6 @@ public class MainControl implements MainControlImpl {
      */
     @Override
     public boolean exitCheckIn() {
-        return false;
+        return order.getShift().cancelSeatSelection();
     }
 }
