@@ -3,7 +3,7 @@
   "booking_no": "3052042001",
   "detail": "Choose extra payed meal",
   "date": "2021-06-04 08:58",
-  "price": 10.00
+  "price": 0.00
 }, {
   "id": "0010101550SE",
   "booking_no": "0010101550",
@@ -15,5 +15,5 @@
   "booking_no": "0010101550",
   "detail": "Choose extra payed meal",
   "date": "2021-06-04 16:59",
-  "price": 10.00
+  "price": 0.00
 }]
