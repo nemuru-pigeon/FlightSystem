@@ -1,8 +1,10 @@
 package com.example.flight_system.control;
 
+import com.example.flight_system.entity.Payment;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -72,6 +74,19 @@ class DataControlTest {
         String path = "src/main/resources/com/example/flight_system/data/" + "test.json";
 
         dataControl.updateData(path, shiftList);
+    }
+
+    @Test
+    void updatePayment() {
+        DecimalFormat df = new DecimalFormat("#0.00");
+        float num1 = 0;
+        float num2 = 10;
+        float num3 = 1;
+        float num4 = 15;
+        assertEquals("0.00", df.format(num1));
+        assertEquals("10.00", df.format(num2));
+        assertEquals("1.00", df.format(num3));
+        assertEquals("15.00", df.format(num4));
     }
 
     @Test

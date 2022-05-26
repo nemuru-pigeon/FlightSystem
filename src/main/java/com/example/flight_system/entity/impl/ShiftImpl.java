@@ -15,4 +15,5 @@ public interface ShiftImpl {
     ScheduledFlight getScheduledFlight();
     Flight getFlight();
     boolean updateSeatSituation(String type, int location);
+    boolean cancelSeatSelection();
 }

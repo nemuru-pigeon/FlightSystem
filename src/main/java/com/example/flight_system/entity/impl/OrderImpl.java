@@ -12,8 +12,9 @@ public interface OrderImpl {
     int getCarryOnBaggage();
     int getCheckInBaggage();
     String getSeat();
+    Meal getMeal();
     List<Payment> getPayments();
     Shift getShift();
-    void selectMeal(Meal meal);
+    boolean selectMeal(String id);
     boolean selectSeat(String type, int location);
 }

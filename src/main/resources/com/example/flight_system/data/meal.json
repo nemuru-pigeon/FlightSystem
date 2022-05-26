@@ -1,0 +1,41 @@
+[{
+  "id": 1,
+  "name": "Standard",
+  "price": 0.00
+}, {
+  "id": 2,
+  "booking_no": "Vegetarian",
+  "detail": 0.00
+}, {
+  "id": 3,
+  "booking_no": "Halal",
+  "detail": 0.00
+}, {
+  "id": 4,
+  "booking_no": "Kosher",
+  "detail": 0.00
+}, {
+  "id": 5,
+  "booking_no": "Ice cream",
+  "detail": 10.00
+}, {
+  "id": 6,
+  "booking_no": "Sushi",
+  "detail": 30.00
+}, {
+  "id": 7,
+  "booking_no": "Beefsteak",
+  "detail": 25.00
+}, {
+  "id": 8,
+  "booking_no": "Spaghetti",
+  "detail": 20.00
+}, {
+  "id": 9,
+  "booking_no": "Hamburger",
+  "detail": 20.00
+}, {
+  "id": 10,
+  "booking_no": "Chinese food",
+  "detail": 15.00
+}]

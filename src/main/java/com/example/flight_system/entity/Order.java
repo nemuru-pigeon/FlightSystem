@@ -70,6 +70,11 @@ public class Order implements OrderImpl {
     }
 
     @Override
+    public Meal getMeal() {
+        return meal;
+    }
+
+    @Override
     public List<Payment> getPayments() {
         return payments;
     }
@@ -80,8 +85,31 @@ public class Order implements OrderImpl {
     }
 
     @Override
-    public void selectMeal(Meal meal) {
+    public boolean selectMeal(String id) {
+        List<Map<String, String>> mealList = dataControl.getAllMeals();
+        for (Map<String, String> mealMap : mealList) {
+            if (mealMap.get("id").equals(id)) {
+                meal = new Meal(mealMap);
 
+                if (!mealMap.get("price").equals("0.00")) {
+                    // add a new payment
+                    Map<String, String> paymentMap = new HashMap<>();
+                    Date date = new Date();
+
+                    paymentMap.put("id", bookingNo + "ME");
+                    paymentMap.put("detail", "Choose extra payed meal");
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                    paymentMap.put("date", sdf.format(date));
+                    paymentMap.put("price", mealMap.get("price"));
+
+                    Payment payment = new Payment(paymentMap);
+                    payments.add(payment);
+                }
+
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -131,11 +159,10 @@ public class Order implements OrderImpl {
         Map<String, String> paymentMap = new HashMap<>();
         Date date = new Date();
 
-        SimpleDateFormat sdf1 = new SimpleDateFormat("yyMMdd");
-        paymentMap.put("id", sdf1.format(date) + "SE");
+        paymentMap.put("id", bookingNo + "SE");
         paymentMap.put("detail", "Choose extra payed seat");
-        SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        paymentMap.put("date", sdf2.format(date));
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        paymentMap.put("date", sdf1.format(date));
         paymentMap.put("price", "5.0");
 
         Payment payment = new Payment(paymentMap);

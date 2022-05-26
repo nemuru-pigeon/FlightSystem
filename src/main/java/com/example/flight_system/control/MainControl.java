@@ -1,5 +1,6 @@
 package com.example.flight_system.control;
 
+import com.example.flight_system.VO.MealInformation;
 import com.example.flight_system.VO.OrderInformation;
 import com.example.flight_system.VO.PaymentInformation;
 import com.example.flight_system.VO.SeatSituation;
@@ -114,18 +115,45 @@ public class MainControl implements MainControlImpl {
     }
 
     @Override
-    public List<Meal> showNormalMeal() {
-        return null;
+    public List<MealInformation> showNormalMeal() {
+        List<MealInformation> normalMeals = new ArrayList<>();
+        MealInformation mealInformation;
+
+        List<Map<String, String>> mealList = dataControl.getAllMeals();
+        for (Map<String, String> mealMap : mealList) {
+            if (mealMap.get("price").equals("0.00")) {
+                mealInformation = new MealInformation();
+                mealInformation.setId(mealMap.get("id"));
+                mealInformation.setName(mealMap.get("name"));
+                normalMeals.add(mealInformation);
+            }
+        }
+
+        return normalMeals;
     }
 
     @Override
-    public List<Meal> showExtraMeal() {
-        return null;
+    public List<MealInformation> showExtraMeal() {
+        List<MealInformation> extraMeals = new ArrayList<>();
+        MealInformation mealInformation;
+
+        List<Map<String, String>> mealList = dataControl.getAllMeals();
+        for (Map<String, String> mealMap : mealList) {
+            if (!mealMap.get("price").equals("0.00")) {
+                mealInformation = new MealInformation();
+                mealInformation.setId(mealMap.get("id"));
+                mealInformation.setName(mealMap.get("name"));
+                mealInformation.setPrice(Float.parseFloat(mealMap.get("price")));
+                extraMeals.add(mealInformation);
+            }
+        }
+
+        return extraMeals;
     }
 
     @Override
-    public void selectMeal(int id) {
-
+    public boolean selectMeal(String id) {
+        return order.selectMeal(id);
     }
 
     @Override
@@ -147,8 +175,8 @@ public class MainControl implements MainControlImpl {
     }
 
     @Override
-    public boolean pay(String cardNum, String vcc2Code) {
-        return false;
+    public boolean pay(String cardNum, int vcc2Code, float amount) {
+        return outputControl.pay(cardNum, vcc2Code, amount);
     }
 
     @Override
@@ -158,8 +186,11 @@ public class MainControl implements MainControlImpl {
 
     @Override
     public boolean updateDate() {
-        // 吴语非写的存储数据的那部分，可以调DataControl里写好的updateShift，在仿照那个函数写order和payment的更新
-        return false;
+        boolean result = dataControl.updateOrder(order);
+        for (Payment payment : order.getPayments()) {
+            result = result && dataControl.updatePayment(payment);
+        }
+        return result;
     }
 
     @Override

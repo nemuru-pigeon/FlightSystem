@@ -5,16 +5,46 @@ import com.example.flight_system.control.impl.OutputContolImpl;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class OutputControl implements OutputContolImpl {
     private String path = "src/main/resources/com/example/flight_system/output_files/";
 
     @Override
+    public boolean pay(String cardNum, int vcc2Code, float amount) {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
+
+        File payFile = new File(path + cardNum + "_" + sdf.format(date) + ".txt");
+        if (payFile.exists()) {
+            System.out.println("Already payed!");
+            return false;
+        }
+
+        try {
+            FileWriter myFile = new FileWriter(payFile);
+            BufferedWriter buffer = new BufferedWriter(myFile);
+            buffer.write("card number: " + cardNum + "\n");
+            buffer.write("VCC2 code: " + vcc2Code + "\n");
+            buffer.write("amount of money: " + amount);
+            buffer.close();
+            myFile.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
     public boolean printBoardingPass(Map<String, String> passInf) {
         File passFile = new File(path + passInf.get("booking_no") + "_pass.txt");
         if (passFile.exists()) {
-            System.out.println("File already exists!");
+            System.out.println("Already printed the boarding pass!");
             return false;
         }
 
@@ -43,7 +73,7 @@ public class OutputControl implements OutputContolImpl {
         for (int i=0; i<num; i++) {
             File file = new File(path + bookingNo + "_tag" + (i+1) + ".txt");
             if (file.exists()) {
-                System.out.println("File already exists!");
+                System.out.println("Already printed the tags!");
                 return false;
             }
 
@@ -68,7 +98,7 @@ public class OutputControl implements OutputContolImpl {
         for (int i=0; i<num; i++) {
             File file = new File(path + bookingNo + "_ticket" + (i+1) + ".txt");
             if (file.exists()) {
-                System.out.println("File already exists!");
+                System.out.println("Already printed the tickets!");
                 return false;
             }
 

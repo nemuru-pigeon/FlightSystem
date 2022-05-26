@@ -136,4 +136,27 @@ public class Shift implements ShiftImpl {
         // keep the seat occupied to avoid that people choose the same seat at the same time
         return dataControl.updateShift(this);
     }
+
+    @Override
+    public boolean cancelSeatSelection() {
+        switch (changedType) {
+            case "first":
+                first = oldSeat;
+                break;
+            case "business":
+                business = oldSeat;
+                break;
+            case "economy":
+                economy = oldSeat;
+                break;
+            case "costlyEconomy":
+                costlyEconomy = oldSeat;
+                break;
+            default:
+                return false;
+        }
+
+        // cancel the seat selection
+        return dataControl.updateShift(this);
+    }
 }
