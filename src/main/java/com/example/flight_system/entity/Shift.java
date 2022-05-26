@@ -139,6 +139,10 @@ public class Shift implements ShiftImpl {
 
     @Override
     public boolean cancelSeatSelection() {
+        if (changedType == null) {
+            return true;
+        }
+
         switch (changedType) {
             case "first":
                 first = oldSeat;
