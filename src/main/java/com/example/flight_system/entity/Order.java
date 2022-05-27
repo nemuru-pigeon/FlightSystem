@@ -128,6 +128,20 @@ public class Order implements OrderImpl {
                 break;
             case "costlyEconomy":
                 typeInt = 4;
+
+                // add a new payment
+                Map<String, String> paymentMap = new HashMap<>();
+                Date date = new Date();
+
+                paymentMap.put("id", bookingNo + "SE");
+                paymentMap.put("detail", "Choose extra payed seat");
+                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                paymentMap.put("date", sdf1.format(date));
+                paymentMap.put("price", "5.0");
+
+                Payment payment = new Payment(paymentMap);
+                payments.add(payment);
+
                 break;
             default:
                 return false;
@@ -154,19 +168,6 @@ public class Order implements OrderImpl {
                 }
             }
         }
-
-        // add a new payment
-        Map<String, String> paymentMap = new HashMap<>();
-        Date date = new Date();
-
-        paymentMap.put("id", bookingNo + "SE");
-        paymentMap.put("detail", "Choose extra payed seat");
-        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        paymentMap.put("date", sdf1.format(date));
-        paymentMap.put("price", "5.0");
-
-        Payment payment = new Payment(paymentMap);
-        payments.add(payment);
 
         // change the seating situation on the same flight
         return shift.updateSeatSituation(type, location);

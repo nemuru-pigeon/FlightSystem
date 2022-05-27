@@ -18,7 +18,6 @@ public class MainControl implements MainControlImpl {
     private final OutputControl outputControl = new OutputControl();
     private Passenger passenger;
     private Order order;
-    private List<Meal> meals;
 
     @Override
     public boolean loginByBookingNo(String bookingNo) {
