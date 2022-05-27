@@ -9,6 +9,7 @@ public class SeatSituation implements Serializable {
     private boolean[] business;
     private boolean[] economy;
     private boolean[] costlyEconomy;
+    private char seatClass;
 
     public SeatSituation() {
     }
@@ -53,6 +54,14 @@ public class SeatSituation implements Serializable {
         this.costlyEconomy = costlyEconomy;
     }
 
+    public char getSeatClass() {
+        return seatClass;
+    }
+
+    public void setSeatClass(char seatClass) {
+        this.seatClass = seatClass;
+    }
+
     @Override
     public String toString() {
         return "SeatSituation{" +
@@ -61,6 +70,7 @@ public class SeatSituation implements Serializable {
                 ", business=" + Arrays.toString(business) +
                 ", economy=" + Arrays.toString(economy) +
                 ", costlyEconomy=" + Arrays.toString(costlyEconomy) +
+                ", seatClass=" + seatClass +
                 '}';
     }
 }
