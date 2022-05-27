@@ -34,8 +34,13 @@ public class ui3Controller {
 
     @FXML
     private Button help;
+
     @FXML
     private Label mytime;
+
+    @FXML
+    private Label check;
+
     @FXML
     void showhelp(ActionEvent event) {
         Main.helppage();
@@ -49,17 +54,22 @@ public class ui3Controller {
     void tonext(ActionEvent event) {
         String bookingnum = inputid.getText().toString();
         boolean ju = mainControl.loginByBookingNo(bookingnum);
-        System.out.println(ju);
-        if(ju == true)
-        {
-            Main.jumpTo("ui5.fxml",1280,720,"wer");
+        if(bookingnum.length() == 10 && bookingnum.matches("[0-9]+")){
+            if(ju)
+            {
+                Main.jumpTo("ui5.fxml",1280,720,"wer");
+            }
+            else{
+                check.setText("CHECK!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("ERROR");
+                alert.setHeaderText("ERROR OCCURRED");
+                alert.setContentText("A WRONG ID, CHECK AND TRY AGAIN");
+                alert.show();
+            }
         }
         else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("ERROR");
-            alert.setHeaderText("ERROR OCCURRED");
-            alert.setContentText("A WRONG ID, CHECK AND TRY AGAIN");
-            alert.show();
+            check.setText("WRONG FORMAT");
         }
 
     }

@@ -46,7 +46,7 @@ public class Main extends Application {
     public static void helppage(){
         try {
             Stage stage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("help.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui2.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             stage.setScene(scene);
             stage.show();
