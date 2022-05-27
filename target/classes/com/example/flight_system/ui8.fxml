@@ -43,7 +43,7 @@
       <Label layoutX="572.0" layoutY="350.0" text="Sushi  $30" />
       <Label layoutX="206.0" layoutY="593.0" prefHeight="31.0" prefWidth="123.0" text="Spaghetti  $20" />
       <Label layoutX="560.0" layoutY="601.0" text="Hamburger  $20" />
-      <Button layoutX="507.0" layoutY="180.0" mnemonicParsing="false">
+      <Button fx:id="sushi" layoutX="507.0" layoutY="180.0" mnemonicParsing="false" onAction="#sushiact">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -55,7 +55,7 @@
             <Insets top="-4.0" />
          </padding>
       </Button>
-      <Button layoutX="831.0" layoutY="182.0" mnemonicParsing="false">
+      <Button fx:id="beefsteak" layoutX="831.0" layoutY="182.0" mnemonicParsing="false" onAction="#beefsteakact">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -67,28 +67,49 @@
             <Insets top="-4.0" />
          </padding>
       </Button>
-      <Button layoutX="175.0" layoutY="453.0" mnemonicParsing="false">
+      <Button fx:id="spaghtti" layoutX="175.0" layoutY="453.0" mnemonicParsing="false" onAction="#spaghttiact">
          <padding>
             <Insets top="-4.0" />
          </padding>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/19aa179a3ae3c2c82b4ec10beca6191a.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button layoutX="515.0" layoutY="453.0" mnemonicParsing="false">
+      <Button fx:id="hamburger" layoutX="515.0" layoutY="453.0" mnemonicParsing="false" onAction="#hamburgeract">
          <padding>
             <Insets top="-4.0" />
          </padding>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/43d213748de19743e61e5fc46f3f76e3.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button layoutX="831.0" layoutY="454.0" mnemonicParsing="false">
+      <Button fx:id="chinesefood" layoutX="831.0" layoutY="454.0" mnemonicParsing="false" onAction="#chinesefoodact">
          <padding>
             <Insets top="-4.0" />
          </padding>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/2dc28a3249d9d3f90ad7ee55156694a9.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Label layoutX="902.0" layoutY="601.0" text="Chinese food  $15" />
-      <Label layoutX="1114.0" layoutY="482.0" text="Your choice is:">
+      <Label layoutX="1123.0" layoutY="443.0" text="Your choice is:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="167.0" layoutY="176.0" mnemonicParsing="false">
+      <Button fx:id="icecream" layoutX="167.0" layoutY="176.0" mnemonicParsing="false" onAction="#icecreamact">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -100,20 +121,25 @@
             <Insets top="-4.0" />
          </padding>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/19aa179a3ae3c2c82b4ec10beca6191a.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="507.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/43d213748de19743e61e5fc46f3f76e3.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="831.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/2dc28a3249d9d3f90ad7ee55156694a9.jpeg" />
-         </image>
-      </ImageView>
+      <Label fx:id="name" layoutX="1151.0" layoutY="489.0" text="NULL">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1134.0" layoutY="528.0" text="The price is:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="1153.0" layoutY="572.0" text="NULL">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1129.0" layoutY="572.0" text="\$">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

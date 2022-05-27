@@ -2,16 +2,24 @@ package com.example.flight_system.boundary;
 
 import com.example.flight_system.Main;
 import com.example.flight_system.control.MainControl;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ui3Controller {
     private MainControl mainControl= new MainControl();
@@ -26,7 +34,8 @@ public class ui3Controller {
 
     @FXML
     private Button help;
-
+    @FXML
+    private Label mytime;
     @FXML
     void showhelp(ActionEvent event) {
         Main.helppage();
@@ -54,5 +63,7 @@ public class ui3Controller {
         }
 
     }
-
+    public void initialize(){
+        Main.showtime(mytime);
+    }
 }

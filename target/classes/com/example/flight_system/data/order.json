@@ -29,6 +29,16 @@
   "meal": null,
   "check_in_status": false
 }, {
+  "booking_no": "3072912810",
+  "pid": "109201200101011111",
+  "shift_id": "221203BJ2344",
+  "class": "F",
+  "carry_on_baggage": 0,
+  "check_in_baggage": 2,
+  "seat": null,
+  "meal": null,
+  "check_in_status": false
+},{
   "booking_no": "0010101550",
   "pid": "307204200101015555",
   "shift_id": "210604TJ6544",
@@ -38,4 +48,14 @@
   "seat": "30E",
   "meal": 1,
   "check_in_status": true
+},{
+  "booking_no": "0010101550",
+  "pid": "307204200111012911",
+  "shift_id": "220721SH8102",
+  "class": "E",
+  "carry_on_baggage": 1,
+  "check_in_baggage": 1,
+  "seat": null,
+  "meal": null,
+  "check_in_status": false
 }]
