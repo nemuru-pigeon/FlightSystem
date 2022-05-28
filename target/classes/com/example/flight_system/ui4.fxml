@@ -42,6 +42,7 @@
                </font>
             </Label>
             <TextField fx:id="IDNUMBER" layoutX="520.0" layoutY="164.0" prefHeight="50.0" prefWidth="308.0" />
+            <Label fx:id="check" layoutX="864.0" layoutY="182.0" prefHeight="17.0" prefWidth="99.0" />
          </children>
       </AnchorPane>
    </children>

@@ -20,9 +20,16 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ui3Controller {
+public class ui3Controller{
     private MainControl mainControl= new MainControl();
+
+    public void setControllers(MainControl controllers) {
+        Main.controllers.put("controller",controllers);
+    }
+
     @FXML
     private Button back;
 
@@ -71,9 +78,9 @@ public class ui3Controller {
         else{
             check.setText("WRONG FORMAT");
         }
-
     }
     public void initialize(){
         Main.showtime(mytime);
+        setControllers(mainControl);
     }
 }

@@ -6,11 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class ui4Controller {
     private MainControl mainControl= new MainControl();
+
+    public void setControllers(MainControl controllers) {
+        Main.controllers.put("controller",controllers);
+    }
+
     @FXML
     private Button exit;
 
@@ -29,8 +33,6 @@ public class ui4Controller {
     @FXML
     private TextField IDNUMBER;
 
-    @FXML
-    private Label check;
     @FXML
     void gotoback(ActionEvent event) {
 
@@ -51,25 +53,23 @@ public class ui4Controller {
     void gotonext(ActionEvent event) {
         String surname = SURNAME.getText().toString();
         String idnumber = IDNUMBER.getText().toString();
-        if(idnumber.length() == 18 ){
-            boolean ju = mainControl.loginBySurnameAndId(surname,idnumber);
-            if(ju)
-            {
-                Main.jumpTo("ui5.fxml",1280,720,"wer");
-            }
-            else{
-                check.setText("CHECK!");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("ERROR");
-                alert.setHeaderText("ERROR OCCURRED");
-                alert.setContentText("A WRONG ID OR SURNAME, CHECK AND TRY AGAIN");
-                alert.show();
-            }
+        boolean ju = mainControl.loginBySurnameAndId(surname,idnumber);
+        if(ju == true)
+        {
+            Main.jumpTo("ui5.fxml",1280,720,"wer");
         }
         else{
-            check.setText("WRONG LENGTH");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setHeaderText("ERROR OCCURRED");
+            alert.setContentText("A WRONG ID OR SURNAME, CHECK AND TRY AGAIN");
+            alert.show();
         }
 
+    }
+
+    public void initialize(){
+        setControllers(mainControl);
     }
 
 }

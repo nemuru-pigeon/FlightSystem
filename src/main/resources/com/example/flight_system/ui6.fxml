@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui6Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui6Controller">
    <children>
       <Text fill="TOMATO" layoutX="26.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT MAP" wrappingWidth="127.240234375">
          <font>
@@ -24,8 +26,7 @@
             <Image url="@images/p6-icon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="388.0" fitWidth="400.0" layoutX="410.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
-      <ScrollBar layoutX="872.0" layoutY="267.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="22.0" />
+      <ImageView fitHeight="388.0" fitWidth="400.0" layoutX="388.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="933.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/p6-icon2.png" />
@@ -51,7 +52,158 @@
             <Font size="23.0" />
          </font>
       </Button>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fx:id="sseat" layoutX="1173.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ScrollPane layoutX="406.0" layoutY="228.0" prefHeight="300.0" prefWidth="468.0">
+         <content>
+          <AnchorPane fx:id="background" minHeight="0.0" minWidth="0.0" prefHeight="653.0" prefWidth="449.0">
+               <children>
+                  <Button fx:id="a1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fx:id="image1" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a2" layoutX="50.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image2" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a3" layoutX="86.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image3" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a4" layoutX="122.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image4" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a5" layoutX="158.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image5" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a6" layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image6" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a7" layoutX="227.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image7" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a8" layoutX="263.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image8" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a9" layoutX="299.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image9" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a10" layoutX="335.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image10" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a11" layoutX="371.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image11" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="a12" layoutX="407.0" layoutY="14.0" mnemonicParsing="false" onAction="#testaction" prefHeight="28.0" prefWidth="36.0">
+                     <graphic>
+                        <ImageView fx:id="image12" fitHeight="32.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="-4.0" left="-4.0" right="-4.0" top="-4.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

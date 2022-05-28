@@ -1,5 +1,7 @@
 package com.example.flight_system;
 
+import com.example.flight_system.control.MainControl;
+import com.example.flight_system.entity.Passenger;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -20,12 +22,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main extends Application {
-    public static Map<String, Object> controllers = new HashMap<String, Object>();
+    public static Map<String, MainControl> controllers = new HashMap<String, MainControl>();
     public static Stage stage;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui3.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui1.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
@@ -66,6 +69,7 @@ public class Main extends Application {
         animation.setCycleCount(Timeline.INDEFINITE);
         animation.play();
     }
+
     public static void main(String[] args) {
         launch();
     }
