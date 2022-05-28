@@ -6,7 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ui4Controller {
     private MainControl mainControl= new MainControl();
@@ -34,9 +39,12 @@ public class ui4Controller {
     private TextField IDNUMBER;
 
     @FXML
+    private Label mytime1;
+
+    @FXML
     void gotoback(ActionEvent event) {
 
-        Main.jumpTo("ui2.fxml",1280,720,"wer");
+        Main.jumpTo("ui2.fxml",1280,720,"Flight System");
     }
 
     @FXML
@@ -46,7 +54,7 @@ public class ui4Controller {
 
     @FXML
     void gotohelp(ActionEvent event) {
-
+        Main.helppage();
     }
 
     @FXML
@@ -67,8 +75,10 @@ public class ui4Controller {
         }
 
     }
-
     public void initialize(){
+        DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+        mytime1.setText(df.format(new Date()));
+        Main.showtime(mytime1);
         setControllers(mainControl);
     }
 

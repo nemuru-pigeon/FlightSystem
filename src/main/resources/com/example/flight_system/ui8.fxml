@@ -141,5 +141,15 @@
             <Font size="17.0" />
          </font>
       </Label>
+      <ImageView fitHeight="118.0" fitWidth="907.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/h3.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="mytime" layoutX="1020.0" layoutY="30.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

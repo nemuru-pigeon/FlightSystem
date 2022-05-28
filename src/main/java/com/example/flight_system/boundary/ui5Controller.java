@@ -8,13 +8,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-        import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.MapValueFactory;
 import org.w3c.dom.events.MouseEvent;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -24,7 +22,7 @@ import java.util.Map;
 public class ui5Controller {
     private MainControl mainControl1;
     private String OrderNumber;
-
+    DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
     public MainControl getControllers() {
         return Main.controllers.get("controller");
     }
@@ -64,7 +62,8 @@ public class ui5Controller {
 
     @FXML
     private TableColumn Date;
-
+    @FXML
+    private Label mytime;
 
     @FXML
     void toback(ActionEvent event) {
@@ -82,6 +81,8 @@ public class ui5Controller {
 
     @FXML
     void initialize() {
+        mytime.setText(df.format(new Date()));
+        Main.showtime(mytime);
         mainControl1 = getControllers();
         System.out.println(mainControl1);
         List<OrderInformation> table1 = mainControl1.showOrders();
@@ -128,5 +129,9 @@ public class ui5Controller {
             });
             return row ;
         });
+    }
+
+    public void HelpP15(ActionEvent actionEvent) {
+        Main.helppage();
     }
 }

@@ -4,9 +4,14 @@ import com.example.flight_system.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ui2Controller {
-
+    DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
     @FXML
     private Button exit;
 
@@ -18,6 +23,8 @@ public class ui2Controller {
 
     @FXML
     private Button tonameinput;
+    @FXML
+    private Label mytime;
 
     @FXML
     void jumptobookinginput(ActionEvent event) {
@@ -37,8 +44,11 @@ public class ui2Controller {
 
     @FXML
     void tohelp(ActionEvent event) {
-
+        Main.helppage();
     }
-
+    public void initialize(){
+        mytime.setText(df.format(new Date()));
+        Main.showtime(mytime);
+    }
 }
 

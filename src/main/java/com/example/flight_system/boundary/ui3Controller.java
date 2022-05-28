@@ -25,6 +25,7 @@ import java.util.Map;
 
 public class ui3Controller{
     private MainControl mainControl= new MainControl();
+    DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
 
     public void setControllers(MainControl controllers) {
         Main.controllers.put("controller",controllers);
@@ -47,6 +48,7 @@ public class ui3Controller{
 
     @FXML
     private Label check;
+
 
     @FXML
     void showhelp(ActionEvent event) {
@@ -80,6 +82,7 @@ public class ui3Controller{
         }
     }
     public void initialize(){
+        mytime.setText(df.format(new Date()));
         Main.showtime(mytime);
         setControllers(mainControl);
     }

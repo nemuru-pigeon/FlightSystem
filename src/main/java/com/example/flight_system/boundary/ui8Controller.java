@@ -1,6 +1,9 @@
 package com.example.flight_system.boundary;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import com.example.flight_system.Main;
@@ -37,6 +40,8 @@ public class ui8Controller {
     @FXML
     private Button beefsteak;
 
+    @FXML
+    private Label mytime;
     @FXML
     private Button spaghtti;
 
@@ -125,6 +130,9 @@ public class ui8Controller {
     }
     @FXML
     void initialize() {
+            DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+            mytime.setText(df.format(new Date()));
+            Main.showtime(mytime);
         assert exitP8 != null : "fx:id=\"exitP8\" was not injected: check your FXML file 'ui8.fxml'.";
         assert helpP8 != null : "fx:id=\"helpP8\" was not injected: check your FXML file 'ui8.fxml'.";
         assert nextP8 != null : "fx:id=\"nextP8\" was not injected: check your FXML file 'ui8.fxml'.";

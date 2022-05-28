@@ -1,6 +1,7 @@
 package com.example.flight_system.boundary;
 
 import java.net.URL;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -14,6 +15,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.MapValueFactory;
@@ -38,6 +40,9 @@ public class ui9Controller{
 
     @FXML
     private Button exitP9;
+
+    @FXML
+    private Label mytime;
 
     @FXML
     private Button back;
@@ -83,6 +88,9 @@ public class ui9Controller{
 
     @FXML
     void initialize(){
+        DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+        mytime.setText(df.format(new Date()));
+        Main.showtime(mytime);
         mainControl1 = getControllers();
         System.out.println(mainControl1);
         List<PaymentInformation> table1 = mainControl1.showPayment();

@@ -28,9 +28,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui2.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-        primaryStage.setTitle("Hello!");
+        primaryStage.setTitle("Flight System");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -49,7 +49,7 @@ public class Main extends Application {
     public static void helppage(){
         try {
             Stage stage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("help.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             stage.setScene(scene);
             stage.show();
