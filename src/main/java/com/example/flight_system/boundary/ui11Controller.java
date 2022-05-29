@@ -13,8 +13,7 @@ import java.util.Date;
 
 public class ui11Controller {
 
-    @FXML
-    private Button exit;
+
 
     @FXML
     private Button next;
@@ -24,10 +23,7 @@ public class ui11Controller {
     @FXML
     private Label mytime;
 
-    @FXML
-    void toexit(ActionEvent event) {
 
-    }
     @FXML
     void help11page(ActionEvent event) {
         Main.helppage();

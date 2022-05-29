@@ -9,8 +9,5 @@
         <module name="FlightSystem" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FlightSystem" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

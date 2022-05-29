@@ -22,9 +22,30 @@ import java.util.Map;
 public class ui5Controller {
     private MainControl mainControl1;
     private String OrderNumber;
+    private String type1;
+    private String Flight1;
+    private String Destination1;
+    private String BorderTime1;
+    Object row1 = new Object();
     DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
     public MainControl getControllers() {
         return Main.controllers.get("controller");
+    }
+
+    public MainControl getMainControl1() {
+        return mainControl1;
+    }
+
+    public String getFlight1() {
+        return Flight1;
+    }
+
+    public String getDestination1() {
+        return Destination1;
+    }
+
+    public String getBorderTime1() {
+        return BorderTime1;
     }
 
     @FXML
@@ -62,20 +83,34 @@ public class ui5Controller {
 
     @FXML
     private TableColumn Date;
+
     @FXML
     private Label mytime;
 
     @FXML
+    private Button exit;
+    @FXML
     void toback(ActionEvent event) {
+        Main.controllers1.clear();
         Main.jumpTo("ui2.fxml",1280,720,"wer");
     }
-
+    @FXML
+    void toexit(ActionEvent event) {
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
+    }
     @FXML
     void toselect(ActionEvent event) {
         mainControl1 = getControllers();
         System.out.println(mainControl1);
         mainControl1.selectOrder(OrderNumber);
-        Main.jumpTo("ui6.fxml",1280,720,"wer");
+        Main.controllers1.put(this.getClass().getSimpleName(), this);
+        System.out.println(type1);
+        if(type1.equals("F"))
+            Main.jumpTo("ui61.fxml",1280,720,"wer");
+        if(type1.equals("B"))
+            Main.jumpTo("ui62.fxml",1280,720,"wer");
+        if(type1.equals("E") || type1.equals("C"))
+            Main.jumpTo("ui63.fxml",1280,720,"wer");
     }
 
 
@@ -85,6 +120,7 @@ public class ui5Controller {
         Main.showtime(mytime);
         mainControl1 = getControllers();
         System.out.println(mainControl1);
+        System.out.print(Main.controllers1.keySet());
         List<OrderInformation> table1 = mainControl1.showOrders();
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
         SimpleDateFormat dateformat1 = new SimpleDateFormat("HH:mm:ss");
@@ -115,20 +151,42 @@ public class ui5Controller {
             list.add(hashMap);
             Table1.setItems(list);
         }
-
-        Table1.setRowFactory( tv -> {
-            TableRow row = new TableRow();
-            row.setOnMouseClicked(event -> {
-                if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
-                    Object rowData = row.getItem();
-                    String[] as=rowData.toString().split(",");
-                    String num=as[1].substring(as[1].indexOf("r")+2);
-                    OrderNumber=num;
-                    System.out.println(num);
-                }
-            });
-            return row ;
-        });
+        ui3Controller controller3 = (ui3Controller) Main.controllers1.get("ui3Controller");
+        System.out.println(controller3);
+        for (String key:Main.controllers1.keySet()){
+            System.out.println(key);
+            if(key.equals("ui3Controller")){
+                System.out.println("1");
+                OrderNumber=controller3.BookNumber;
+                System.out.println(OrderNumber);
+            }
+            else if(key.equals("ui4Controller")){
+                Table1.setRowFactory( tv -> {
+                    TableRow row = new TableRow();
+                    row.setOnMouseClicked(event -> {
+                        if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
+                            Object rowData = row.getItem();
+                            String[] as=rowData.toString().split(",");
+                            String num=as[1].substring(as[1].indexOf("r")+2);
+                            String type=as[5].substring(as[5].indexOf("s")+3);
+                            String Boarding=as[0].substring(as[0].indexOf("r")+2);
+                            String Destionantion=as[2].substring(as[2].indexOf("n")+7);
+                            String BoarderTime=as[7].substring(as[7].indexOf("e")+2);
+                            Flight1=Boarding;
+                            Destination1=Destionantion;
+                            BorderTime1=BoarderTime;
+                            OrderNumber=num;
+                            type1=type;
+                            row1 = rowData;
+                            System.out.println(num);
+                        }
+                    });
+                    return row;
+                });
+            }else{
+                //System.out.println("nooooooooooooooooooooooooooooooo!");
+            }
+        }
     }
 
     public void HelpP15(ActionEvent actionEvent) {

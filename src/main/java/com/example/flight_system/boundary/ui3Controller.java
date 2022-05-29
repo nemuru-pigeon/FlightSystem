@@ -26,6 +26,7 @@ import java.util.Map;
 public class ui3Controller{
     private MainControl mainControl= new MainControl();
     DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+    public String BookNumber = "";
 
     public void setControllers(MainControl controllers) {
         Main.controllers.put("controller",controllers);
@@ -49,6 +50,8 @@ public class ui3Controller{
     @FXML
     private Label check;
 
+    @FXML
+    private Button exit;
 
     @FXML
     void showhelp(ActionEvent event) {
@@ -56,7 +59,7 @@ public class ui3Controller{
     }
     @FXML
     void toback(ActionEvent event) {
-            Main.jumpTo("ui2.fxml",1280,720,"wer");
+            Main.jumpTo("ui2.fxml",1280,720,"Flight System");
     }
 
     @FXML
@@ -66,7 +69,10 @@ public class ui3Controller{
         if(bookingnum.length() == 10 && bookingnum.matches("[0-9]+")){
             if(ju)
             {
-                Main.jumpTo("ui5.fxml",1280,720,"wer");
+                BookNumber=inputid.getText().toString();
+                System.out.println("successful"+BookNumber);
+                Main.controllers1.put(this.getClass().getSimpleName(), this);
+                Main.jumpTo("ui5.fxml",1280,720,"Flight System");
             }
             else{
                 check.setText("CHECK!");
@@ -80,6 +86,11 @@ public class ui3Controller{
         else{
             check.setText("WRONG FORMAT");
         }
+    }
+
+    @FXML
+    void toexit(ActionEvent event) {
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
     public void initialize(){
         mytime.setText(df.format(new Date()));

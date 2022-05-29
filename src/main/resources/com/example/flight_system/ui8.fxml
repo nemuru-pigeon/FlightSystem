@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui8Controller">
@@ -104,7 +105,7 @@
          </graphic>
       </Button>
       <Label layoutX="902.0" layoutY="601.0" text="Chinese food  $15" />
-      <Label layoutX="1123.0" layoutY="443.0" text="Your choice is:">
+      <Label layoutX="1114.0" layoutY="403.0" text="Your choice is:">
          <font>
             <Font size="15.0" />
          </font>
@@ -121,22 +122,22 @@
             <Insets top="-4.0" />
          </padding>
       </Button>
-      <Label fx:id="name" layoutX="1151.0" layoutY="489.0" text="NULL">
+      <Label fx:id="name" layoutX="1131.0" layoutY="453.0" text="NULL">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label layoutX="1134.0" layoutY="528.0" text="The price is:">
+      <Label layoutX="1123.0" layoutY="498.0" text="The price is:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="price" layoutX="1153.0" layoutY="572.0" text="NULL">
+      <Label fx:id="price" layoutX="1144.0" layoutY="542.0" text="NULL">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label layoutX="1129.0" layoutY="572.0" text="\$">
+      <Label layoutX="1126.0" layoutY="542.0" text="\$">
          <font>
             <Font size="17.0" />
          </font>
@@ -151,5 +152,8 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Line endX="100.0" layoutX="1153.0" layoutY="369.0" startX="-100.0" />
+      <Line endX="-100.0" endY="232.33331298828125" layoutX="1152.0" layoutY="370.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="1153.0" layoutY="602.0" startX="-100.0" />
    </children>
 </AnchorPane>

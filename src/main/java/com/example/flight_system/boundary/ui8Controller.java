@@ -15,8 +15,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class ui8Controller {
-    private MainControl mainControl= new MainControl();
+    private MainControl mainControl;
+    public MainControl getControllers() {
+        return Main.controllers.get("controller");
+    }
     private boolean chose = false;
+    private String num = "100";
     @FXML
     private ResourceBundle resources;
 
@@ -53,6 +57,7 @@ public class ui8Controller {
 
     @FXML
     private Button icecream;
+
     @FXML
     private Label name;
 
@@ -60,7 +65,7 @@ public class ui8Controller {
     private Label price;
     @FXML
     void ExitP8(ActionEvent event) {
-
+        boolean a = mainControl.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
@@ -75,9 +80,10 @@ public class ui8Controller {
 
     @FXML
     void NextP8(ActionEvent event) {
+        chose = mainControl.selectMeal(num);
         if(chose)
         {
-            Main.jumpTo("ui9.fxml",1280,720,"wer");
+            Main.jumpTo("ui9.fxml",1280,720,"Flight System");
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -89,47 +95,54 @@ public class ui8Controller {
     }
     @FXML
     void beefsteakact(ActionEvent event) {
-        chose = mainControl.selectMeal("7");
+        num = "7";
+        //chose = mainControl.selectMeal("7");
         name.setText("Beefsteak");
         price.setText("25");
     }
 
     @FXML
     void chinesefoodact(ActionEvent event) {
-        chose = mainControl.selectMeal("10");
+        num = "10";
+        //chose = mainControl.selectMeal("10");
         name.setText("Chinese food");
         price.setText("15");
     }
 
     @FXML
     void hamburgeract(ActionEvent event) {
-        chose = mainControl.selectMeal("9");
+        num = "9";
+        //chose = mainControl.selectMeal("9");
         name.setText("Hamburger");
         price.setText("20");
     }
 
     @FXML
     void icecreamact(ActionEvent event) {
-        chose = mainControl.selectMeal("5");
+        num = "5";
+        //chose = mainControl.selectMeal("5");
         name.setText("Ice cream");
         price.setText("10");
     }
 
     @FXML
     void spaghttiact(ActionEvent event) {
-        chose = mainControl.selectMeal("8");
+        num = "8";
+        //chose = mainControl.selectMeal("8");
         name.setText("Spaghetti");
         price.setText("20");
     }
 
     @FXML
     void sushiact(ActionEvent event) {
-        chose = mainControl.selectMeal("6");
+        num = "6";
+        //chose = mainControl.selectMeal("6");
         name.setText("Sushi");
         price.setText("30");
     }
     @FXML
     void initialize() {
+            mainControl = getControllers();
             DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
             mytime.setText(df.format(new Date()));
             Main.showtime(mytime);

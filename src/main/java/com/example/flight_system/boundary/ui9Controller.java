@@ -13,11 +13,9 @@ import com.example.flight_system.control.impl.MainControlImpl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.MapValueFactory;
 
 public class ui9Controller{
@@ -25,7 +23,7 @@ public class ui9Controller{
     public MainControl getControllers() {
         return Main.controllers.get("controller");
     }
-
+    private boolean a = false;
     @FXML
     private ResourceBundle resources;
 
@@ -68,6 +66,7 @@ public class ui9Controller{
 
     @FXML
     void ExitP9(ActionEvent event) {
+        boolean a = mainControl1.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
@@ -78,22 +77,42 @@ public class ui9Controller{
 
     @FXML
     void BackP9(ActionEvent event) {
+
         Main.jumpTo("ui7.fxml",1280,720,"Flight System");
     }
 
     @FXML
     void NextP9(ActionEvent event) {
-        Main.jumpTo("ui10.fxml",1280,720,"Flight System");
+        if(a){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("CONFIRM");
+            alert.setHeaderText("ATTENTION");
+            alert.setContentText("You dont have extra pay, confirm to get your ticket");
+            alert.show();
+            Button ok = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
+            ok.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    Main.jumpTo("ui13.fxml",1280,720,"Flight System");
+                }
+            });
+        }
+        else {
+            Main.jumpTo("ui10.fxml",1280,720,"Flight System");
+        }
     }
 
     @FXML
     void initialize(){
+        Table.setPlaceholder(new Label("no extra pay"));
         DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
         mytime.setText(df.format(new Date()));
         Main.showtime(mytime);
         mainControl1 = getControllers();
         System.out.println(mainControl1);
         List<PaymentInformation> table1 = mainControl1.showPayment();
+        a = table1.isEmpty();
+        System.out.println(table1.size());
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
         SimpleDateFormat dateformat1 = new SimpleDateFormat("HH:mm:ss");
         PaymentContent.setCellValueFactory(new MapValueFactory<String>("PaymentContent"));
@@ -114,5 +133,6 @@ public class ui9Controller{
             list.add(hashMap);
             Table.setItems(list);
         }
+        table1.clear();
     }
 }

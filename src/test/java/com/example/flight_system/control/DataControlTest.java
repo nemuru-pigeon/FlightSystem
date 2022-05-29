@@ -1,5 +1,6 @@
 package com.example.flight_system.control;
 
+import com.example.flight_system.entity.Payment;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
@@ -47,15 +48,6 @@ class DataControlTest {
         for (Map<String, String> map : result) {
             System.out.println(map.get("price"));
             System.out.println(Float.parseFloat(map.get("price")));
-        }
-    }
-
-    @Test
-    void getAllMeals() {
-        DataControl dataControl = new DataControl();
-        List<Map<String, String>> result = dataControl.getAllMeals();
-        for (Map<String, String> map : result) {
-            System.out.println(map.get("id"));
         }
     }
 
