@@ -23,12 +23,13 @@ import java.util.Map;
 
 public class Main extends Application {
     public static Map<String, MainControl> controllers = new HashMap<String, MainControl>();
+    public static Map<String, Object> controllers1 = new HashMap<String, Object>();
     public static Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui1.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         primaryStage.setTitle("Flight System");
         primaryStage.setScene(scene);

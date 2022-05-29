@@ -20,6 +20,8 @@ public class ui4Controller {
         Main.controllers.put("controller",controllers);
     }
 
+    public String BookNumber = "";
+
     @FXML
     private Button exit;
 
@@ -49,7 +51,7 @@ public class ui4Controller {
 
     @FXML
     void gotoexit(ActionEvent event) {
-
+        Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
     @FXML
@@ -64,6 +66,7 @@ public class ui4Controller {
         boolean ju = mainControl.loginBySurnameAndId(surname,idnumber);
         if(ju == true)
         {
+            Main.controllers1.put(this.getClass().getSimpleName(), this);
             Main.jumpTo("ui5.fxml",1280,720,"wer");
         }
         else{
@@ -73,7 +76,6 @@ public class ui4Controller {
             alert.setContentText("A WRONG ID OR SURNAME, CHECK AND TRY AGAIN");
             alert.show();
         }
-
     }
     public void initialize(){
         DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");

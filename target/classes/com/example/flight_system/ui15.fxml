@@ -25,7 +25,7 @@
             <Image url="@images/h4.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="1032.0" layoutY="30.0" text="Label">
+      <Label fx:id="mytime" layoutX="1032.0" layoutY="30.0" text="Label">
          <font>
             <Font size="18.0" />
          </font>

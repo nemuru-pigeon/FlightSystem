@@ -10,7 +10,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 public class ui7Controller {
-    private MainControl mainControl= new MainControl();
+    private MainControl mainControl1;
+    public MainControl getControllers() {
+        return Main.controllers.get("controller");
+    }
+    private String num = "100";
     @FXML
     private ResourceBundle resources;
     private boolean chose = false;
@@ -61,6 +65,8 @@ public class ui7Controller {
 
     @FXML
     void NextP7(ActionEvent event) {
+        System.out.println(num);
+        chose = mainControl1.selectMeal(num);
         if(chose)
         {
             Main.jumpTo("ui9.fxml",1280,720,"wer");
@@ -81,35 +87,46 @@ public class ui7Controller {
 
     @FXML
     void StandardP7(ActionEvent event) {
-        chose = mainControl.selectMeal("1");
+        num = "1";
+        System.out.println(num);
+        //chose = mainControl.selectMeal("1");
     }
 
     @FXML
     void VegetarinP7(ActionEvent event) {
-        chose = mainControl.selectMeal("2");
+        num = "2";
+        System.out.println(num);
+        //chose = mainControl.selectMeal("2");
     }
 
     @FXML
     void HalalP7(ActionEvent event) {
-        chose = mainControl.selectMeal("3");
+        num = "3";
+        System.out.println(num);
+        //chose = mainControl.selectMeal("3");
     }
 
     @FXML
     void XxxP7(ActionEvent event) {
-        chose = mainControl.selectMeal("4");
+        num = "4";
+        System.out.println(num);
+        //chose = mainControl.selectMeal("4");
     }
 
     @FXML
     void initialize() {
-        assert exitp7 != null : "fx:id=\"exitp7\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert standard != null : "fx:id=\"standard\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert vegetarin != null : "fx:id=\"vegetarin\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert helpp7 != null : "fx:id=\"helpp7\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert menup7 != null : "fx:id=\"menup7\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert nextp7 != null : "fx:id=\"nextp7\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert halal != null : "fx:id=\"halal\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert xxx != null : "fx:id=\"xxx\" was not injected: check your FXML file 'ui7.fxml'.";
-        assert backp7 != null : "fx:id=\"backp7\" was not injected: check your FXML file 'ui7.fxml'.";
+        ui5Controller controllerx = (ui5Controller) Main.controllers1.get("ui5Controller");
+        mainControl1 = getControllers();
+        //mainControl1.selectOrder(controllerx.getOrderNumber());
+//        assert exitp7 != null : "fx:id=\"exitp7\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert standard != null : "fx:id=\"standard\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert vegetarin != null : "fx:id=\"vegetarin\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert helpp7 != null : "fx:id=\"helpp7\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert menup7 != null : "fx:id=\"menup7\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert nextp7 != null : "fx:id=\"nextp7\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert halal != null : "fx:id=\"halal\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert xxx != null : "fx:id=\"xxx\" was not injected: check your FXML file 'ui7.fxml'.";
+//        assert backp7 != null : "fx:id=\"backp7\" was not injected: check your FXML file 'ui7.fxml'.";
 
     }
 }
