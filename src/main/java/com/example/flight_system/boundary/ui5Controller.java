@@ -164,7 +164,7 @@ public class ui5Controller {
                 Table1.setRowFactory( tv -> {
                     TableRow row = new TableRow();
                     row.setOnMouseClicked(event -> {
-                        if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
+                        if (event.getClickCount() == 1 && (! row.isEmpty()) ) {
                             Object rowData = row.getItem();
                             String[] as=rowData.toString().split(",");
                             String num=as[1].substring(as[1].indexOf("r")+2);
