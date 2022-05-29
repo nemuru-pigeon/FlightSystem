@@ -91,6 +91,13 @@ public class Order implements OrderImpl {
             if (mealMap.get("id").equals(id)) {
                 meal = new Meal(mealMap);
 
+                for (Payment payment : payments) {
+                    if (payment.getId().equals(bookingNo + "ME")) {
+                        payments.remove(payment);
+                        break;
+                    }
+                }
+
                 if (!mealMap.get("price").equals("0.00")) {
                     // add a new payment
                     Map<String, String> paymentMap = new HashMap<>();
