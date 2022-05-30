@@ -101,7 +101,7 @@ FlightSystem) and overwrite the files in
 As we are using IDEA and Maven, please run your test code in an IDE environment. 
 Below is a screenshot of a sample test of our code:
 
-<img src="https://github.com/nemuru-pigeon/FlightSystem/tree/master/src/main/resources/com/example/flight_system/images/test_result.png" alt="figure 1: Testing result">
+<img src="src/main/resources/com/example/flight_system/images/test_result.png" alt="figure 1: Testing result">
 
 ---
 

@@ -64,7 +64,13 @@ public class MainControl implements MainControlImpl {
     public List<OrderInformation> showOrders() {
         List<OrderInformation> orderInformationList = new ArrayList<>();
         OrderInformation orderInformation;
-        List<Order> orders = passenger.getOrders();
+        List<Order> orders;
+        if (order != null) {
+            orders = new ArrayList<>();
+            orders.add(order);
+        } else {
+            orders = passenger.getOrders();
+        }
         Shift shift;
         ScheduledFlight scheduledFlight;
 
@@ -111,6 +117,11 @@ public class MainControl implements MainControlImpl {
     @Override
     public boolean selectSeat(String type, int location) {
         return order.selectSeat(type, location);
+    }
+
+    @Override
+    public char getSeatClass() {
+        return order.getSeatClass();
     }
 
     @Override
