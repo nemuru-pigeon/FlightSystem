@@ -68,7 +68,7 @@ public class ui10Controller {
         }
         else{
             pass = 0;
-            checkcard.setText("THIS LENGTH SHOULD BE 12");
+            checkcard.setText("THIS LENGTH SHOULD BE 13 to 19");
         }
         if(Pass.length() == 3 && Pass.matches("[0-9]+")){
             checkvcc2.setText("");
