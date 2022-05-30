@@ -19,6 +19,10 @@ public class Order implements OrderImpl {
     private boolean checkInStatus = false;
     private Shift shift;
 
+    /**
+     * initialize by json data
+     * @param order the json data in Map<String, String> format
+     */
     public Order(Map<String, String> order) {
         bookingNo = order.get("booking_no");
         seatClass = order.get("class").charAt(0);
@@ -84,6 +88,11 @@ public class Order implements OrderImpl {
         return shift;
     }
 
+    /**
+     * select the meal and record the selection
+     * @param id the id of the meal
+     * @return whether the selection is successful
+     */
     @Override
     public boolean selectMeal(String id) {
         List<Map<String, String>> mealList = dataControl.getAllMeals();
@@ -119,6 +128,12 @@ public class Order implements OrderImpl {
         return false;
     }
 
+    /**
+     * select the seat and record the selection
+     * @param type The type of seat selected. The range is first, business, economy and costly_economy.
+     * @param location where the passenger select the seat
+     * @return whether the passenger select the seat successfully
+     */
     @Override
     public boolean selectSeat(String type, int location) {
         for (Payment payment : payments) {

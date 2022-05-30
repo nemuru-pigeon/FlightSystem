@@ -12,6 +12,10 @@ public class Meal implements MealImpl {
     private String name;
     private float price;
 
+    /**
+     * initialize by json data
+     * @param meal the json data in Map<String, String> format
+     */
     public Meal(Map<String, String> meal) {
         id = meal.get("id");
         name = meal.get("name");

@@ -18,6 +18,11 @@ import java.util.Map;
 public class DataControl implements DataControlImpl {
     private final String filesPath = "src/main/resources/com/example/flight_system/data/";
 
+    /**
+     * This is a reusable method that all json files can be read by this method.
+     * @param path the path to read the json file
+     * @return whether the reading is successful
+     */
     public List<Map<String, String>> getMaps(String path) {
         List<Map<String, String>> result;
 
@@ -82,6 +87,12 @@ public class DataControl implements DataControlImpl {
         return getMaps(path);
     }
 
+    /**
+     * This is a reusable method that all json files can be updated by this method
+     * @param path the path where the json file stay in
+     * @param newData the new data that should be written in the json file
+     * @return whether the data have been written successfully
+     */
     public boolean updateData(String path, List<Map<String, String>> newData) {
         File file = new File(path);
         ObjectMapper mapper=new ObjectMapper();

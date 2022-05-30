@@ -10,6 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class InputControl implements InputControlImpl {
+    /**
+     * simulate the delivery of the ID information from the card reader
+     * @return whether the delivery is successful
+     */
     @Override
     public Map<String, String> readIdCard() {
         Map<String, String> passengerInf = new HashMap<>();

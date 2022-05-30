@@ -13,6 +13,10 @@ public class Payment implements PaymentImpl {
     private Date date;
     private float price;
 
+    /**
+     * initialize by json data
+     * @param payment the json data in Map<String, String> format
+     */
     public Payment(Map<String, String> payment) {
         id = payment.get("id");
         detail = payment.get("detail");
