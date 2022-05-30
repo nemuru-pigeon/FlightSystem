@@ -121,6 +121,13 @@ public class Order implements OrderImpl {
 
     @Override
     public boolean selectSeat(String type, int location) {
+        for (Payment payment : payments) {
+            if (payment.getId().equals(bookingNo + "SE")) {
+                payments.remove(payment);
+                break;
+            }
+        }
+
         // record the location of the seat
         int typeInt;
         switch (type) {

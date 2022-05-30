@@ -124,7 +124,7 @@ public class DataControl implements DataControlImpl {
         paymentMap.put("price", df.format(payment.getPrice()));
         paymentList.add(paymentMap);
 
-        String path = filesPath + "shift.json";
+        String path = filesPath + "payment.json";
         return updateData(path, paymentList);
     }
 
@@ -149,7 +149,7 @@ public class DataControl implements DataControlImpl {
                 shiftMap.put("first", booleanArrToString(shift.getFirst()));
                 shiftMap.put("business", booleanArrToString(shift.getBusiness()));
                 shiftMap.put("economy", booleanArrToString(shift.getEconomy()));
-                shiftMap.put("costlyEconomy", booleanArrToString(shift.getCostlyEconomy()));
+                shiftMap.put("costly_economy", booleanArrToString(shift.getCostlyEconomy()));
                 break;
             }
         }
