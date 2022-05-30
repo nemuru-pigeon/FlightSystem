@@ -129,7 +129,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.flightsystem/com.example.flight_system.Main</mainClass>
+                            <mainClass>com.example.flightsystem/com.example.flight_system.StartMain</mainClass>
                         </configuration>
                     </execution>
                 </executions>
