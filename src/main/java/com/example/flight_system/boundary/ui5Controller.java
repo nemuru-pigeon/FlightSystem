@@ -114,6 +114,7 @@ public class ui5Controller {
         mainControl1 = getControllers();
         mainControl1.selectOrder(OrderNumber);
         Main.controllers1.put(this.getClass().getSimpleName(), this);
+        type1 = "" + mainControl1.getSeatClass();
         flytype = mainControl1.getFlightType();
         if(type1.equals("F") && flytype.equals("A319T2"))
             Main.jumpTo("ui61.fxml",1280,720,"Flight System");
