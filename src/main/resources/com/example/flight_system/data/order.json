@@ -36,7 +36,7 @@
   "carry_on_baggage" : "0",
   "check_in_baggage" : "2",
   "seat" : null,
-  "meal" : "7",
+  "meal" : null,
   "check_in_status" : "false"
 }, {
   "booking_no" : "0010101550",

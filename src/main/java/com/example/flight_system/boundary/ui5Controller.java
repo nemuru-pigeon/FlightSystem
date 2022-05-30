@@ -96,6 +96,7 @@ public class ui5Controller {
     }
     @FXML
     void toexit(ActionEvent event) {
+        boolean a = mainControl1.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
     @FXML

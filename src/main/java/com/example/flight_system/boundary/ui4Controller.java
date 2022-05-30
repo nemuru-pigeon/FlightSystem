@@ -51,6 +51,7 @@ public class ui4Controller {
 
     @FXML
     void gotoexit(ActionEvent event) {
+        boolean a = mainControl.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 

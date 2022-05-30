@@ -114,6 +114,11 @@ public class MainControl implements MainControlImpl {
     }
 
     @Override
+    public String getFlightType() {
+        return order.getShift().getFlight().getType().getType();
+    }
+
+    @Override
     public List<MealInformation> showNormalMeal() {
         List<MealInformation> normalMeals = new ArrayList<>();
         MealInformation mealInformation;

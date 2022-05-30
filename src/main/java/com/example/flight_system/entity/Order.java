@@ -132,16 +132,16 @@ public class Order implements OrderImpl {
         int typeInt;
         switch (type) {
             case "first":
-                typeInt = 1;
+                typeInt = 49;
                 break;
             case "business":
-                typeInt = 2;
+                typeInt = 50;
                 break;
             case "economy":
-                typeInt = 3;
+                typeInt = 51;
                 break;
             case "costlyEconomy":
-                typeInt = 4;
+                typeInt = 52;
 
                 // add a new payment
                 Map<String, String> paymentMap = new HashMap<>();
@@ -173,11 +173,11 @@ public class Order implements OrderImpl {
                 if (count == location) {
                     int columnCount = 0;
                     for (int k=0; k<j; k++) {
-                        if (structure[i][k] != 0) {
+                        if (structure[i][k] != 48) {
                             columnCount++;
                         }
                     }
-                    seat = String.format("%02d", (i+1)) + ('A'+columnCount);
+                    seat = String.format("%02d", (i+1)) + (char) ('A'+columnCount);
                     break label1;
                 }
             }

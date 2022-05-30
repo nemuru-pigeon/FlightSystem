@@ -114,19 +114,19 @@ public class Shift implements ShiftImpl {
         changedType = type;
         switch (type) {
             case "first":
-                oldSeat = first;
+                oldSeat = first.clone();
                 first[location-1] = true;
                 break;
             case "business":
-                oldSeat = business;
+                oldSeat = business.clone();
                 business[location-1] = true;
                 break;
             case "economy":
-                oldSeat = economy;
+                oldSeat = economy.clone();
                 economy[location-1] = true;
                 break;
             case "costlyEconomy":
-                oldSeat = costlyEconomy;
+                oldSeat = costlyEconomy.clone();
                 costlyEconomy[location-1] = true;
                 break;
             default:

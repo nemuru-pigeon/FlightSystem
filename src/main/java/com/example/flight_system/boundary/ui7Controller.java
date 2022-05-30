@@ -50,6 +50,7 @@ public class ui7Controller {
 
     @FXML
     void ExitP7(ActionEvent event) {
+        boolean a = mainControl1.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
 
@@ -60,7 +61,8 @@ public class ui7Controller {
 
     @FXML
     void BackP7(ActionEvent event) {
-        Main.jumpTo("ui6.fxml",1280,720,"Flight System");
+        boolean a = mainControl1.exitCheckIn();
+        Main.jumpTo("ui5.fxml",1280,720,"Flight System");
     }
 
     @FXML

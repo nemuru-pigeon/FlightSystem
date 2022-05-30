@@ -26,6 +26,11 @@ public class FlightType implements FlightTypeImpl {
     }
 
     @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
     public int[][] getStructure() {
         return structure;
     }

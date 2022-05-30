@@ -90,6 +90,7 @@ public class ui3Controller{
 
     @FXML
     void toexit(ActionEvent event) {
+        boolean a = mainControl.exitCheckIn();
         Main.jumpTo("ui1.fxml",1280,720,"Flight System");
     }
     public void initialize(){

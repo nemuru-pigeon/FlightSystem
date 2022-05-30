@@ -17,6 +17,7 @@ public interface MainControlImpl {
     boolean selectOrder(String bookingNo);
     SeatSituation showSeat();
     boolean selectSeat(String type, int location);
+    String getFlightType();
     List<MealInformation> showNormalMeal();
     List<MealInformation> showExtraMeal();
     boolean selectMeal(String id);
