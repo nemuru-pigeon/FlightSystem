@@ -63,7 +63,7 @@ public class ui10Controller {
         String Card = card.getText().toString();
         String Pass = pass.getText().toString();
         int pass = 1;
-        if(Card.length() == 12 && Card.matches("[0-9]+")){
+        if(Card.length()>=13 && Card.length()<=19 && Card.matches("[0-9]+")){
             checkcard.setText("");
         }
         else{

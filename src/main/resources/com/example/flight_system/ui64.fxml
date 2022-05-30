@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui64Controller">
+   <children>
+      <Text fill="TOMATO" layoutX="26.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT MAP" wrappingWidth="127.240234375">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="145.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seats are shown on the seat map. You may change the seat bt selecting the customer and a free seat" textAlignment="CENTER" wrappingWidth="1014.8603515625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TOMATO" height="48.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="466.0" fitWidth="309.0" layoutX="38.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/p6-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="933.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/p6-icon2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exit" layoutX="20.0" layoutY="656.0" mnemonicParsing="false" onAction="#ExitP6" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="help" layoutX="168.0" layoutY="656.0" mnemonicParsing="false" onAction="#HelpP6" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="HELP" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="926.0" layoutY="656.0" mnemonicParsing="false" onAction="#BackP6" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #000000;" text="BACK" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="next" layoutX="1073.0" layoutY="656.0" mnemonicParsing="false" onAction="#nextP6" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #ff6347;" text="Continue" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Text fx:id="sseat" layoutX="1173.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <AnchorPane fx:id="background" layoutX="477.0" layoutY="288.0" prefHeight="198.0" prefWidth="367.0">
+         <children>
+            <Button fx:id="a1" layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a2" layoutX="135.0" layoutY="29.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a3" layoutX="199.0" layoutY="29.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a4" layoutX="297.0" layoutY="29.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a5" layoutX="27.0" layoutY="76.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a6" layoutX="135.0" layoutY="76.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a7" layoutX="199.0" layoutY="76.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="a8" layoutX="297.0" layoutY="76.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Free.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="628.0" layoutY="215.0" text="First">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="117.0" text="London" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="flighid" layoutX="99.0" layoutY="117.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="-42.0" layoutX="632.0" layoutY="130.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="499.0" layoutY="129.0" startX="85.0" startY="-7.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="499.0" layoutY="130.0" startX="85.0" startY="8.0" stroke="WHITE" />
+      <Label fx:id="des" layoutX="638.0" layoutY="117.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="956.0" layoutY="117.0" text="Boarder Time ：" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="boardertime" layoutX="1098.0" layoutY="117.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

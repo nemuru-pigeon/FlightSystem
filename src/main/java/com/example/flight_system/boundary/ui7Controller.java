@@ -15,6 +15,8 @@ public class ui7Controller {
         return Main.controllers.get("controller");
     }
     private String num = "100";
+    String flytype;
+    String type1;
     @FXML
     private ResourceBundle resources;
     private boolean chose = false;
@@ -62,7 +64,20 @@ public class ui7Controller {
     @FXML
     void BackP7(ActionEvent event) {
         boolean a = mainControl1.exitCheckIn();
-        Main.jumpTo("ui5.fxml",1280,720,"Flight System");
+        if(type1.equals("F") && flytype.equals("A319T2"))
+            Main.jumpTo("ui61.fxml",1280,720,"Flight System");
+        else if(type1.equals("B") && flytype.equals("A319T2"))
+            Main.jumpTo("ui62.fxml",1280,720,"Flight System");
+        else if(type1.equals("E") && flytype.equals("A319T2"))
+            Main.jumpTo("ui63.fxml",1280,720,"Flight System");
+        else if(type1.equals("C") && flytype.equals("A319T2"))
+            Main.jumpTo("ui63.fxml",1280,720,"Flight System");
+        else if(type1.equals("F") && flytype.equals("B787-9"))
+            Main.jumpTo("ui64.fxml",1280,720,"Flight System");
+        else if(type1.equals("E") && flytype.equals("B787-9"))
+            Main.jumpTo("ui66.fxml",1280,720,"Flight System");
+        else if(type1.equals("C") && flytype.equals("B787-9"))
+            Main.jumpTo("ui66.fxml",1280,720,"Flight System");
     }
 
     @FXML
@@ -119,6 +134,8 @@ public class ui7Controller {
     void initialize() {
         ui5Controller controllerx = (ui5Controller) Main.controllers1.get("ui5Controller");
         mainControl1 = getControllers();
+        flytype = controllerx.getFlytype();
+        type1 = controllerx.getType1();
         //mainControl1.selectOrder(controllerx.getOrderNumber());
 //        assert exitp7 != null : "fx:id=\"exitp7\" was not injected: check your FXML file 'ui7.fxml'.";
 //        assert standard != null : "fx:id=\"standard\" was not injected: check your FXML file 'ui7.fxml'.";

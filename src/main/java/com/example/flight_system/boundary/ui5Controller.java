@@ -26,6 +26,12 @@ public class ui5Controller {
     private String Flight1;
     private String Destination1;
     private String BorderTime1;
+    private String flytype;
+
+    public String getType1() {
+        return type1;
+    }
+
     Object row1 = new Object();
     DateFormat df = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
     public MainControl getControllers() {
@@ -42,6 +48,10 @@ public class ui5Controller {
 
     public String getDestination1() {
         return Destination1;
+    }
+
+    public String getFlytype() {
+        return flytype;
     }
 
     public String getBorderTime1() {
@@ -102,17 +112,25 @@ public class ui5Controller {
     @FXML
     void toselect(ActionEvent event) {
         mainControl1 = getControllers();
-        System.out.println(mainControl1);
         mainControl1.selectOrder(OrderNumber);
         Main.controllers1.put(this.getClass().getSimpleName(), this);
-        System.out.println(type1);
-        if(type1.equals("F"))
-            Main.jumpTo("ui61.fxml",1280,720,"wer");
-        if(type1.equals("B"))
-            Main.jumpTo("ui62.fxml",1280,720,"wer");
-        if(type1.equals("E") || type1.equals("C"))
-            Main.jumpTo("ui63.fxml",1280,720,"wer");
+        flytype = mainControl1.getFlightType();
+        if(type1.equals("F") && flytype.equals("A319T2"))
+            Main.jumpTo("ui61.fxml",1280,720,"Flight System");
+        else if(type1.equals("B") && flytype.equals("A319T2"))
+            Main.jumpTo("ui62.fxml",1280,720,"Flight System");
+        else if(type1.equals("E") && flytype.equals("A319T2"))
+            Main.jumpTo("ui63.fxml",1280,720,"Flight System");
+        else if(type1.equals("C") && flytype.equals("A319T2"))
+            Main.jumpTo("ui63.fxml",1280,720,"Flight System");
+        else if(type1.equals("F") && flytype.equals("B787-9"))
+            Main.jumpTo("ui64.fxml",1280,720,"Flight System");
+        else if(type1.equals("E") && flytype.equals("B787-9"))
+            Main.jumpTo("ui66.fxml",1280,720,"Flight System");
+        else if(type1.equals("C") && flytype.equals("B787-9"))
+            Main.jumpTo("ui66.fxml",1280,720,"Flight System");
     }
+
 
 
     @FXML

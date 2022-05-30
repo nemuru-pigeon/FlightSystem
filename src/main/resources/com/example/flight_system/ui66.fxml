@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui63Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flight_system.boundary.ui66Controller">
     <children>
         <Text fill="TOMATO" layoutX="26.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEAT MAP" wrappingWidth="127.240234375">
             <font>
@@ -54,11 +54,11 @@
                 <Font size="23.0" />
             </font>
         </Button>
-      <ScrollPane layoutX="485.0" layoutY="197.0" prefHeight="387.0" prefWidth="367.0">
+      <ScrollPane layoutX="389.0" layoutY="204.0" prefHeight="387.0" prefWidth="518.0">
          <content>
-              <AnchorPane fx:id="background" prefHeight="401.0" prefWidth="364.0">
+              <AnchorPane fx:id="background" prefHeight="651.0" prefWidth="494.0">
                   <children>
-                      <Button fx:id="a1" layoutX="15.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a1" layoutX="38.0" layoutY="28.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -67,7 +67,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a2" layoutX="66.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a2" layoutX="90.0" layoutY="28.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -76,7 +76,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a4" layoutX="197.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a4" layoutX="229.0" layoutY="32.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -85,7 +85,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a5" layoutX="244.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a5" layoutX="277.0" layoutY="31.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -94,43 +94,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a7" layoutX="15.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a8" layoutX="66.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a14" layoutX="67.0" layoutY="140.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a18" layoutX="293.0" layoutY="140.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a3" layoutX="119.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a7" layoutX="413.0" layoutY="31.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -139,7 +103,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a6" layoutX="293.0" layoutY="27.0" mnemonicParsing="false" onAction="#chose" prefHeight="20.0" prefWidth="20.0">
+                      <Button fx:id="a8" layoutX="39.0" layoutY="80.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -148,7 +112,70 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a11" layoutX="244.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a14" layoutX="413.0" layoutY="82.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a18" layoutX="229.0" layoutY="132.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a3" layoutX="179.0" layoutY="31.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a6" layoutX="365.0" layoutY="32.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a11" layoutX="230.0" layoutY="81.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a12" layoutX="279.0" layoutY="82.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a24" layoutX="181.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a30" layoutX="67.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -157,7 +184,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a12" layoutX="293.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a36" layoutX="393.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -166,16 +193,25 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a24" layoutX="294.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a17" layoutX="181.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
-                                      <Image url="@images/Free.png" />
+                                      <Image url="@images/Extra.png" />
                                   </image>
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a30" layoutX="294.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a23" layoutX="92.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a29" layoutX="15.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -184,7 +220,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a36" layoutX="294.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a35" layoutX="340.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -193,25 +229,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a17" layoutX="245.0" layoutY="141.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a23" layoutX="245.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a29" layoutX="245.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a34" layoutX="277.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -220,7 +238,43 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a35" layoutX="245.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a28" layoutX="414.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a22" layoutX="39.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a16" layoutX="92.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a10" layoutX="181.0" layoutY="81.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a33" layoutX="229.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -229,7 +283,43 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a34" layoutX="198.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a27" layoutX="365.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a21" layoutX="414.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a15" layoutX="40.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a9" layoutX="92.0" layoutY="81.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a32" layoutX="176.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -238,7 +328,25 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a28" layoutX="197.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a26" layoutX="278.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a20" layoutX="365.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@images/Extra.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Button>
+                      <Button fx:id="a31" layoutX="121.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -247,142 +355,34 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a22" layoutX="198.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a16" layoutX="198.0" layoutY="140.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a10" layoutX="197.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a25" layoutX="230.0" layoutY="184.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
-                                      <Image url="@images/Free.png" />
+                                      <Image url="@images/Extra.png" />
                                   </image>
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a33" layoutX="119.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a27" layoutX="119.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a13" layoutX="365.0" layoutY="82.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
-                                      <Image url="@images/Free.png" />
+                                      <Image url="@images/Extra.png" />
                                   </image>
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a21" layoutX="119.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a15" layoutX="119.0" layoutY="141.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a9" layoutX="119.0" layoutY="86.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                      <Button fx:id="a19" layoutX="278.0" layoutY="133.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                           <graphic>
                               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
-                                      <Image url="@images/Free.png" />
+                                      <Image url="@images/Extra.png" />
                                   </image>
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button fx:id="a32" layoutX="68.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a26" layoutX="68.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a20" layoutX="68.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a31" layoutX="15.0" layoutY="290.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a25" layoutX="15.0" layoutY="240.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a13" layoutX="15.0" layoutY="140.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                      <Button fx:id="a19" layoutX="16.0" layoutY="190.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
-                          <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@images/Free.png" />
-                                  </image>
-                              </ImageView>
-                          </graphic>
-                      </Button>
-                  <Button fx:id="a42" layoutX="296.0" layoutY="337.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a42" layoutX="229.0" layoutY="302.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -391,7 +391,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a39" layoutX="120.0" layoutY="337.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a39" layoutX="67.0" layoutY="303.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -400,7 +400,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a41" layoutX="247.0" layoutY="339.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a41" layoutX="176.0" layoutY="302.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -409,7 +409,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a40" layoutX="199.0" layoutY="340.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a40" layoutX="121.0" layoutY="302.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -418,7 +418,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a38" layoutX="68.0" layoutY="336.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a38" layoutX="15.0" layoutY="304.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -427,7 +427,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a37" layoutX="16.0" layoutY="336.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a37" layoutX="446.0" layoutY="260.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -436,7 +436,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a48" layoutX="296.0" layoutY="386.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a48" layoutX="67.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -445,7 +445,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a45" layoutX="120.0" layoutY="386.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a45" layoutX="393.0" layoutY="304.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -454,7 +454,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a47" layoutX="247.0" layoutY="388.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a47" layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -463,7 +463,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a46" layoutX="199.0" layoutY="389.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a46" layoutX="446.0" layoutY="304.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -472,7 +472,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a44" layoutX="68.0" layoutY="385.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a44" layoutX="340.0" layoutY="302.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -481,7 +481,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a43" layoutX="16.0" layoutY="385.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a43" layoutX="277.0" layoutY="302.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -490,7 +490,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a54" layoutX="296.0" layoutY="431.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a54" layoutX="393.0" layoutY="345.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -499,7 +499,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a51" layoutX="120.0" layoutY="431.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a51" layoutX="229.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -508,7 +508,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a53" layoutX="247.0" layoutY="433.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a53" layoutX="340.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -517,7 +517,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a52" layoutX="199.0" layoutY="434.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a52" layoutX="277.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -526,7 +526,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a50" layoutX="68.0" layoutY="430.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a50" layoutX="176.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -535,7 +535,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a49" layoutX="16.0" layoutY="430.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a49" layoutX="121.0" layoutY="347.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="12.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -544,7 +544,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a60" layoutX="293.0" layoutY="484.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a60" layoutX="229.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -553,7 +553,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a57" layoutX="120.0" layoutY="481.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a57" layoutX="68.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -562,7 +562,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a59" layoutX="247.0" layoutY="483.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a59" layoutX="176.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -571,7 +571,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a58" layoutX="199.0" layoutY="484.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a58" layoutX="121.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -580,7 +580,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a56" layoutX="68.0" layoutY="480.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a56" layoutX="15.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -589,7 +589,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a55" layoutX="16.0" layoutY="480.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a55" layoutX="446.0" layoutY="345.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -598,7 +598,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a66" layoutX="296.0" layoutY="526.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a66" layoutX="68.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -607,7 +607,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a63" layoutX="119.0" layoutY="524.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a63" layoutX="393.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -616,7 +616,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a65" layoutX="248.0" layoutY="526.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a65" layoutX="15.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -625,7 +625,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a64" layoutX="196.0" layoutY="526.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a64" layoutX="446.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -634,7 +634,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a62" layoutX="67.0" layoutY="523.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a62" layoutX="340.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -643,7 +643,232 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="a61" layoutX="15.0" layoutY="523.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                  <Button fx:id="a61" layoutX="279.0" layoutY="387.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a67" layoutX="121.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a70" layoutX="282.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a68" layoutX="176.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a69" layoutX="229.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a73" layoutX="446.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a71" layoutX="340.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a72" layoutX="393.0" layoutY="426.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a81" layoutX="393.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a80" layoutX="340.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a82" layoutX="446.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a78" layoutX="229.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a79" layoutX="282.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a76" layoutX="121.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a74" layoutX="15.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a75" layoutX="68.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a77" layoutX="176.0" layoutY="467.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a86" layoutX="176.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a84" layoutX="68.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a83" layoutX="15.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a85" layoutX="121.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a88" layoutX="282.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a87" layoutX="229.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a91" layoutX="446.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a89" layoutX="340.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Free.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="a90" layoutX="395.0" layoutY="509.0" mnemonicParsing="false" onAction="#chose" prefHeight="15.0" prefWidth="20.0">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
