@@ -15,6 +15,10 @@ public class Passenger implements PassengerImpl {
     private String givenName;
     private List<Order> orders;
 
+    /**
+     * initialize by json data
+     * @param passenger the json data in Map<String, String> format
+     */
     public Passenger(Map<String, String> passenger) {
         id = passenger.get("id");
         surname = passenger.get("surname");
@@ -49,6 +53,11 @@ public class Passenger implements PassengerImpl {
         return orders;
     }
 
+    /**
+     * select the order that the passenger want to check in
+     * @param bookingNo the booking number of the order
+     * @return whether the selection is successful
+     */
     @Override
     public Order selectOrder(String bookingNo) {
         for (Order order : orders) {

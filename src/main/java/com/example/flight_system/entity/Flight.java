@@ -12,6 +12,10 @@ public class Flight implements FlightImpl {
     private String id;
     private FlightType type;
 
+    /**
+     * initialize by json data
+     * @param flight the json data in Map<String, String> format
+     */
     public Flight(Map<String, String> flight) {
         id = flight.get("id");
 

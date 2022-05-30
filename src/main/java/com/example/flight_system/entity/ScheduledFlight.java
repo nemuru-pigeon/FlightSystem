@@ -14,6 +14,10 @@ public class ScheduledFlight implements ScheduledFlightImpl {
     private String destination;
     private String placeOfDeparture;
 
+    /**
+     * initialize by json data
+     * @param scheduledFlight the json data in Map<String, String> format
+     */
     public ScheduledFlight(Map<String, String> scheduledFlight) {
         flightNo = scheduledFlight.get("flight_no");
 

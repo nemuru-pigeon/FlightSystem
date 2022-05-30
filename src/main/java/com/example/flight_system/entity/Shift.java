@@ -26,6 +26,10 @@ public class Shift implements ShiftImpl {
     public Shift() {
     }
 
+    /**
+     * initialize by json data
+     * @param shift the json data in Map<String, String> format
+     */
     public Shift(Map<String, String> shift) {
         id = shift.get("id");
 
@@ -60,6 +64,11 @@ public class Shift implements ShiftImpl {
         }
     }
 
+    /**
+     * change from Sting to boolean[]
+     * @param from the String to be changed
+     * @return the result boolean[]
+     */
     private boolean[] changeFormat(String from) {
         int length = from.length();
         boolean[] to = new boolean[length];
@@ -109,6 +118,13 @@ public class Shift implements ShiftImpl {
         return flight;
     }
 
+    /**
+     * Whenever the passenger select the seat, the system will update
+     * the seat situation to achieve the "lock seat" function.
+     * @param type The type of seat selected. The range is first, business, economy and costly_economy.
+     * @param location where the passenger select the seat
+     * @return whether the seat selected by the passenger is locked
+     */
     @Override
     public boolean updateSeatSituation(String type, int location) {
         changedType = type;
@@ -137,6 +153,11 @@ public class Shift implements ShiftImpl {
         return dataControl.updateShift(this);
     }
 
+    /**
+     * If the passenger doesn't finish his/her check-in process and
+     * exit the system, the locked seat should be unlocked.
+     * @return whether the seat is unlocked
+     */
     @Override
     public boolean cancelSeatSelection() {
         if (changedType == null) {

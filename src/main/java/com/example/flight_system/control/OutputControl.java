@@ -12,6 +12,13 @@ import java.util.Map;
 public class OutputControl implements OutputContolImpl {
     private String path = "src/main/resources/com/example/flight_system/output_files/";
 
+    /**
+     * send the pay information to other system
+     * @param cardNum the number of the bank card
+     * @param vcc2Code the VCC2 code of the bank card
+     * @param amount the amount of money
+     * @return whether the information has been sent successfully
+     */
     @Override
     public boolean pay(String cardNum, int vcc2Code, float amount) {
         Date date = new Date();
@@ -40,6 +47,12 @@ public class OutputControl implements OutputContolImpl {
         return true;
     }
 
+    /**
+     * send the information of the boarding pass to the printer and
+     * let the printer print it
+     * @param passInf the information of the boarding pass
+     * @return whether the printer successfully print the boarding pass
+     */
     @Override
     public boolean printBoardingPass(Map<String, String> passInf) {
         File passFile = new File(path + passInf.get("booking_no") + "_pass.txt");
@@ -68,6 +81,14 @@ public class OutputControl implements OutputContolImpl {
         return true;
     }
 
+    /**
+     * send the information of the tags to the printer and
+     * let the printer print them
+     * @param bookingNo the booking number of the order
+     * @param id the id of the passenger
+     * @param num the number of tags needed to be print
+     * @return whether the printer successfully print the tags
+     */
     @Override
     public boolean printTags(String bookingNo, String id, int num) {
         for (int i=0; i<num; i++) {
@@ -93,6 +114,14 @@ public class OutputControl implements OutputContolImpl {
         return true;
     }
 
+    /**
+     * send the information of the tickets to the printer and
+     * let the printer print them
+     * @param bookingNo the booking number of the order
+     * @param id the id of the passenger
+     * @param num the number of tags needed to be print
+     * @return whether the printer successfully print the tickets
+     */
     @Override
     public boolean printTickets(String bookingNo, String id, int num) {
         for (int i=0; i<num; i++) {

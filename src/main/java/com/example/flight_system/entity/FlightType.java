@@ -11,11 +11,20 @@ public class FlightType implements FlightTypeImpl {
     public FlightType() {
     }
 
+    /**
+     * initialize by json data
+     * @param flightType the json data in Map<String, String> format
+     */
     public FlightType(Map<String, String> flightType) {
         type = flightType.get("type");
         structure = changeFormat(flightType.get("structure"));
     }
 
+    /**
+     * change from String to int[][]
+     * @param from the String
+     * @return the result int[][]
+     */
     private int[][] changeFormat(String from) {
         int length = from.length();
         int[][] to = new int[length/12][12];
